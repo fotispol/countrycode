@@ -1,32 +1,86 @@
-Q: Who is Batman?
-A: Batman is a fictional comic book character.
+Interviewer: What is the KYC module?
+Interviewee: The KYC module is a system that verifies the identities of merchants and customers to ensure compliance with legal regulations and to prevent fraudulent activity.
 
-Q: What is torsalplexity?
-A: ?
+Interviewer: How are merchants ranked in the KYC module?
+Interviewee: Merchants are ranked into 6 size categories based on their daily transaction volume.
 
-Q: What is Devz9?
-A: ?
+Interviewer: What happens when a merchant is first introduced into the KYC module?
+Interviewee: When a merchant is first introduced into the KYC module, they default at level 4, and their level can only go up as they perform more transactions.
 
-Q: Who is George Lucas?
-A: George Lucas is American film director and producer famous for creating Star Wars.
+Interviewer: What is the importance of verifying a Viva Wallet account?
+Interviewee: The Viva Wallet account will not be functional, meaning it will not have an IBAN account or be enabled for customers to transfer money, pay bills, use their card, etc., unless the account is verified.
 
-Q: What is the capital of California?
-A: Sacramento.
+Interviewer: How long does the verification process take?
+Interviewee: The official timeframe for the verification process to be completed is 1 to 4 business days.
 
-Q: What orbits the Earth?
-A: The Moon.
+Interviewer: What should be done if a fully verified customer requests to update their document with a new ID number?
+Interviewee: If a fully verified customer requests to update their document with a new ID number, the case needs to be raised to KYC support.
 
-Q: Who is Fred Rickerson?
-A: ?
+Interviewer: What should be done if a customer asks when their account will be verified?
+Interviewee: If a customer asks when their account will be verified, the merchant should be advised to locate the review status of the documents submitted on their UI and check the KYC Proof tabs on Dynamics.
 
-Q: What is an atom?
-A: An atom is a tiny particle that makes up everything.
+Interviewer: How are merchant size and KYC level related?
+Interviewee: The merchant size and KYC levels are related in a table that outlines the KYC requirements per level.
 
-Q: Who is Alvan Muntz?
-A: ?
+Interviewer: What happens when a merchant reaches KYC Level 6?
+Interviewee: When a merchant reaches KYC Level 6, their identification level automatically changes to Level 6, and KYC Ops proceed to background checks.
 
-Q: What is Kozar-09?
-A: ?
+Interviewer: What should be done if a KYC proof/document has been rejected?
+Interviewee: If a KYC proof/document has been rejected, the merchant should be consulted on what they need to upload, and the comments on the KYC Proof tabs next to the rejected document should be checked.
 
-Q: How many moons does Mars have?
-A: Two, Phobos and Deimos.
+Interviewer: What is the automated process for renewing expired documents?
+Interviewee: The automated process for renewing expired documents includes setting specific proofs to the "Expired" status one month before expiration, notifying the customer through a custom pinned feed item and email, setting the identification state to "PENDING" on the day of expiration, providing a grace period of 30 days for liquidation if enabled, and removing the liquidation role if the customer does not renew the documents within 30 days after expiration.
+
+Interviewer: Why is tax information collected from clients by financial institutions?
+Interviewee: Governments worldwide require financial institutions to collect tax information from their clients and report this information to relevant tax authorities of each country in order to combat tax evasion, improve tax transparency, and protect the reliability of the tax system.
+
+Interviewer: Can you explain the KYC Module and its importance in the Viva Wallet system?
+Interviewee: Certainly. KYC, or Know Your Customer, is a process used by financial institutions to verify the identity of their clients. In the case of Viva Wallet, the KYC Module is used to verify the identity of merchants who use our system. This is important for several reasons, including preventing fraud, complying with regulations, and protecting both Viva Wallet and our customers.
+
+Interviewer: How are merchants ranked in the Viva Wallet system?
+Interviewee: Merchants are ranked into six size categories based on their transactions' volume, which is calculated on a daily basis.
+
+Interviewer: Can you explain the KYC process for new merchants in the Viva Wallet system?
+Interviewee: When a merchant is first introduced into our system, they default to level 4. The level can only go up as the merchant performs all sorts of transactions. The transactions volume calculates all incoming & outgoing transactions of the merchants under the category (Change Amount) and not transactions under the category Change Available (which includes Reserved & Unreserved transactions).
+
+Interviewer: What happens if a merchant does not verify their account?
+Interviewee: If a merchant does not verify their account, their Viva Wallet account won't be functional. This means that they will not instantly have an IBAN account, be enabled, and customers will not be able to transfer money, pay bills, use their card, etc.
+
+Interviewer: How long does the verification process take?
+Interviewee: Officially, the timeframe that is needed for a customer's account to be verified is 1 to 4 business days. However, in some cases, the process may take up to 4 business days due to the need for additional checks. In the event that it takes longer than 4 business days, the merchant should contact KYC support.
+
+Interviewer: Can merchants update their documents with a new ID number?
+Interviewee: Yes, if a fully verified customer requests to update their document with their new ID number, we need to raise the case to KYC support.
+
+Interviewer: How can merchants check the status of their documents?
+Interviewee: Merchants can locate the review status of the documents they submitted by following this path: Settings > Profile > Verify Account. They can also check the KYC Proof tabs on Dynamics when they contact us via chat or email.
+
+Interviewer: Are there any troubleshooting steps for merchants who cannot upload their KYC documents?
+Interviewee: Yes, merchants who cannot upload their KYC documents should try logging in from another browser, deleting cookies, logging in through the Viva Wallet app, using an incognito window, or trying another device (laptop or mobile).
+
+Interviewer: What happens if a merchant's documents expire?
+Interviewee: Viva Wallet is required to renew all expired documents previously submitted by its customers, as well as renew specific documents for high-risk merchants and personal accounts annually. One month before expiration, specific proofs are automatically set to status "Expired," and the customer is notified via email and a pinned feed item. If the customer does not renew and upload their documents, their identification status is set to "Pending," and their liquidation role is not affected. If they do not renew their documents within 30 days after expiration, their liquidation role is removed.
+
+Interviewer: What is FATCA and when did it come into force?
+Interviewee: The Foreign Accounts Tax Compliance Act, known as FATCA, was imposed by the USA and came into force in July 2014. Its aim is to detect, deter and discourage offshore tax evasion by U.S. citizens or residents, who either directly or indirectly, invest outside the USA through foreign financial institutions.
+
+Interviewer: Which countries, including Greece, have signed an Intergovernmental Agreement with the USA for the implementation of FATCA provisions by financial institutions in their jurisdictions?
+Interviewee: Several countries, including Greece, have signed an Intergovernmental Agreement with the USA for the implementation of FATCA provisions by financial institutions in their jurisdictions.
+
+Interviewer: What is the Common Reporting Standard (CRS)?
+Interviewee: The Common Reporting Standard, known as the CRS, was promoted by the Organization for Economic o-operation and Development (OECD) as an additional international initiative based on the development of a single global standard for the automatic exchange of information between tax authorities. Several countries, including Greece, have adopted the CRS, with the number of participating countries constantly increasing.
+
+Interviewer: What is the purpose of the CRS and which financial institutions are obligated to comply with it?
+Interviewee: The purpose of the CRS is to tackle tax evasion and ensure tax compliance at an international level. The collection and reporting of data is a regulatory obligation that also applies to Greek financial institutions, pursuant to Council Directive.
+
+Interviewer: What should a customer do if they have questions about the FATCA or CRS forms?
+Interviewee: If a customer has questions about the FATCA or CRS forms, we should ge them to contact their tax advisor/accountant, the AADE, or the local tax authority. Additionally, the customer may visit the website of the Internal Revenue Service (IRS) or the Independent Authority for Public Revenue for more information.
+
+Interviewer: What are the FATCA compliance forms, and where can a customer find them?
+Interviewee: The FATCA compliance forms include the W-9 form, the W-8BEN form (for natural persons), and the W-8BEN-E form (for legal entities). A customer can find these forms at https://help.vivawallet.com/en/articles/5857106-fatca-crs.
+
+Interviewer: What are the CRS compliance forms, and where can a customer find them?
+Interviewee: The CRS compliance forms include the Tax Residency Self-Certification Form for controlling persons, entities, and natural persons, as well as proof of TAX-ID. A customer can find these forms at https://help.vivawallet.com/en/articles/5857106-fatca-crs.
+
+Interviewer: What are the additional notifications that Merchants will receive when in Pending state?
+Interviewee: As of 26/8/2020, Merchants will receive 2 additional notifications via email when in Pending state (Levels 4 &5). The new notifications will be sent in the form of e-mails.
