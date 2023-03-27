@@ -1,0 +1,3543 @@
+KYC Module
+
+Section 1: General Info
+Subsection 1: Verification of Business Account
+
+Merchants are ranked into 6 size categories, based on their transactions' volume (calculated daily)
+
+
+KYC Process 
+When a merchant is first introduced into our system, he defaults at level 4. The level can only go up as the merchant performs all sorts of transactions. The transactions volume calculates all incoming & outgoing transactions of the merchants under the category (Change Amount) and not transactions under the category Change Available (which includes Reserved & Unreserved transactions).
+
+The Viva Wallet account won't be functional (will not instantly have an IBAN account, be enabled and customers will be able to transfer money, pay bills, use their card etc.) unless they verify their account. 
+
+Important Note! 
+We would like to inform you that the official information that will be given to customers concerning the timeframe that is needed for their account to be verified is 1 to 4 business days. 
+
+When a FULLY verified customer requests to update their document with his/her new ID number, we need to raise the case to KYC Support. 
+
+For internal use ONLY:
+
+There will be some cases, where the verification process will be completed in 4 business days, instead of 3. The reason is that we may need to run some extra checks internally before verifying the merchant's account. Given this, we will advise all merchants from now on that the verification process will be completed in 1 to 4 business days.
+
+In the event that you receive a query from a merchant with regards to the verification process, and when his account will be verified, keep in mind the below points: 
+
+Advise the merchant to locate the review status of the documents submitted on his UI by following this path; (Settings>Profile>Verify Account)
+At the same time, check the KYC Proof tabs on Dynamics (When the merchant contacted you via chat or E-Mail
+In the event that there is a document that has been rejected, consult the merchant on what he needs to upload (check comments on KYC Proof tabs next to the rejected document) 
+NOTE! In case that a customer asks to be informed on when his account will be verified, and you locate on KYC Proof tabs all documents marked as "Approved", PLEASE:
+
+Ask the merchant when was the date he uploaded his LAST document (cross-check the information on KYC Proof tabs) / The 1 to 4 business days timeframe begins from the date that the LAST document has been uploaded. 
+If all documents are approved and the merchant should have been verified, but does not have liquidation, i.e. the ability to transfer funds and the KYC status is "NO", advise him that he will receive an E-mail shortly to his registered E-mail address informing him about the completion of the verification process. DO NOT CONFIRM THAT ALL THE DOCUMENTS ARE APPROVED ONLY THAT THESE HAVE BEEN UPLOADED. You may use this macro "FIRST NAME, we need some more time so as to verify your account. All the necessary checks have not been completed and you will be informed about the result of the verification to your registered email address. 
+IF more than 4 business days have passed, and the merchant's status is verified "NO", as well as liquidation status "NO", escalate the case to KYC Support. 
+
+Merchant Size & KYC Level Relation
+The following table includes the merchant size and the KYC levels and how they are related to each other.
+
+NOTE: From 09/04/2021 the levels 1,2,3 are not applicable.
+KYC REQUIREMENTS PER LEVEL  
+KYC only CHECKS 	Level 4 and Level 6	and for a few countries Level 5
+
+Identity & ID verification vendor 
+ 
+Physical Documentation according to the legal form
+
+Due Diligence
+
+KYC Levels explained:
+Level 1- NOT APPLICABLE 
+Level 2- NOT APPLICABLE 
+Level 3- NOT APPLICABLE 
+
+Level 4
+
+Merchant sees a feed item requesting him to verify his account.
+He must upload the legal documents asked, depending on the legal form, to verify his account.
+ID Check through ID check app
+
+Pending Verification feed item (UI).
+
+Viva Wallet account interface - ID verification steps
+Step 1: The customer must use a device that has a camera to take live photo (selfie) of himself and of the document. If the device has a camera, the customer will see the following and can click "CONTINUE" (for messages in the supported languages please refer to ID Verification Messages: https://viva-wallet.document360.io/v1/docs/id-verification-messages).
+
+If the device does not have a camera, the customer will be prompted to either connect a webcam or download the Viva Wallet app, in order to proceed.
+Step 2: Customer starts the procedure. 
+Step 3: Chooses the ID document they wish to upload.
+Step 4: Must Take two photos of both sides of the document.
+Step 5: When ID Verification is completed the customer is prompted to "Continue" with Face Verification.
+The camera must be centered.
+The customer must "Frame" his/her face in the center of the oval and select "Start".
+If the face is not centered, the customer will see the following and be prompted to "Try Again".
+Step 6: When the photo is taken correctly centered, an image quality check screen will appear.
+The external vendor will proceed to the following checks and will provide an answer in minutes.
+On Level 4 , the merchant must also upload legal documents depending on the legal form.
+The KYC Policy per country and per legal form, is described in detail in this article:https://viva-wallet.document360.io/v1/docs/kyc-policy-per-country
+
+KYC Ops proceed to evaluation and:
+
+If checks ARE ok:
+
+Proof Status: manually set to Approved.
+Identification State: manually set to Verified.
+IBAN feature is enabled.
+Allow liquidation role is on.
+If checks are NOT ok:
+
+Proof Status: manually set to Rejected.
+Verification status change to Pending.
+Pending verification mail.
+Pending verification feed item.
+Account interface Feed item - Verification in progress.
+Account interface Feed item – Pending verification.
+Account interface Feed item – Successful verification.
+
+Successful verification email.
+
+Note! In Portugal, Spain, Germany and Austria the Verification of the ID Document is performed by Video ID and not ID check. During the process of Video ID, the customer must verify his ID through a video call with an agent.
+This is a picture of what the customer sees before the start of the Video ID verification process.
+
+For internal use: Once the verification of the documents by the KYC team is completed, the merchant's account is assigned to the AML team for audit, and AML gives the final approval for identification, therefore the account acquires IBAN and becomes fully operational.
+Important! So in case of customer communication and after checking in the KYC Proofs field that all the required documents are "approved" and yet the customer's account does not have liquidation, i.e. the ability to transfer funds, then we check the processing date of the document from the "Last updated" field (see photo).
+
+If 1 business day has passed since the most recent test date, then we proceed to escalation in the KYC team.
+Ιf it has not passed we inform the customer that all the necessary checks have not been completed and he will be informed about the result of the identification in his registration email.
+Level 5
+The KYC level 5 is not applicable in most of the countries that Viva Wallet has presence. Merchants upload all the legal documents in the previous level - level 4. This article explains in detail the policy for each country per legal form/ per proof: KYC-POLICIES PER COUNTRY: https://viva-wallet.document360.io/v1/docs/kyc-policy-per-country
+Level 6 
+When the merchant enters KYC Level 6, then the following things happen:
+
+Identification Level automatically changes to Level 6 and Identification State to IN PROGRESS.
+Customer is not affected (no feed item, no notifications in account interface).
+Allow Liquidation role is not affected.
+KYC Department proceeds to  background checks and after that the following outcomes may occur:
+
+If checks ARE ok:
+Proof Status: manually set to Approved.
+Identification Level: manually set to Level 6.
+Identification State: manually set to Verified.
+If checks are NOT ok:
+
+Proof Status: manually set to Rejected.
+Other actions depend on the findings and will be based on Risk Policy (terminate account etc.).
+Troubleshooting steps
+In case the upload of the KYC documents is NOT available to the customer, please consult the merchant to follow the below steps: 
+
+Try to log in from another browser 
+Delete Cookies 
+Try to log in through VW app (the customer will be redirected to log in via their mobile browser)
+Use an incognito window 
+Try another device (laptop or mobile) 
+He should need to upload at least one document and the ID check would need to be completed first, so as the "Submit" option to be enabled. 
+
+Last but not least, there is a specific file size limit for each document. Each attached document should not exceed 8 MB and must be in the format pdf/jpg./png. and/or doc.
+
+Subsection 2: KYC Proofs in CRM Dynamics
+
+Display the KYC proofs that a client needs to provide in CRM Dynamics
+
+Important! 
+The verification process takes 1 to 4 business days from the date of the documents' submission.
+
+The UBO data proofs will be automatically opened based on customer's self-declared data on the associated people screen of the registration form.
+
+Rules for opening proofs
+
+All stakeholders (natural persons) registered by the customer himself via the registration form when:
+
+role = Shareholder AND shareholding percentage >= 25% (all countries)
+role = Shareholder AND shareholding percentage > 25% (Portugal)
+Exception: A UBO proof won't be opened when the natural person also holds the role of Authorized administrator (he is the person opening the account), since we do the KYC for him anyway. 
+
+Note: In each proof opened, the First Name/Last name of the stakeholder will be added as a Comment by the system, so it will be displayed to the customer on the proof list.
+
+1. Go to CRM Dynamics - Customer Service Hub  -> and from the search bar
+
+find the Account you wish by using the company's VAT number or Registration number.
+
+2. Once you find the Account select “KYC proofs”.
+
+3. Inside this tab, you will see all the KYC proofs that are requested for the specific customer as well as their status. An explanation of each status can be found at the end of this section by scrolling down.
+
+Common KYC Proof Types:
+
+Proof of ID 
+Proof of Tax ID 
+Proof of Residence
+Proof of Funds & Wealth
+Proof of Business Establishment, Ownership & Representation
+Economic Profile
+ID Check
+Residence Permit
+
+KYC Proof Statuses:
+
+Created: Shows that we have requested a specific proof/document
+Validation Asked: Customer has uploaded a proof/document and it is being reviewed by our KYC department
+Rejected: Document/Proof has been rejected by KYC
+Approved: Document/Proof has been accepted by KYC
+Expired: New Document/Proof must be uploaded with recent date
+Postponed: Document/Proof can be uploaded at a later date
+
+Subsection 3: Expired Documents - Automated Process
+
+Viva Wallet is required to renew all expired documents previously submitted by its Customers, as well as renew specific documents for High Risk merchants & personal (GR) accounts annually
+
+The workflow for both processes is the same:
+
+1. One month before expiration (expiration = date of proof expiration OR date of annual review)
+
+Specific Proofs are automatically set to status in "Expired" so the relevant slots will be opened in Selfcare.
+Custom pinned feed item to notify the customer.
+
+Custom e-mail to notify the customer.
+
+Liquidation Role & Identification status are not affected at this point.
+
+2. Date of expiration If the customer does not proceed to the renewal and upload of documents, the following things happen on the day of expiration/annual review:
+
+Identification State is set to PENDING.
+Default deed item for PENDING status.
+Default e-mail for PENDING status.
+Liquidation is not affected, but in case it is Enabled then we provide a grace period of 30 days.
+3. End of grace period (30 days after expiration) If the customer does not proceed to the renewal of the documents within 30 days after the expiration, the following things happen:
+
+Identification State remains PENDING.
+Liquidation Role is removed.
+Workflow disruption - submission of documents
+
+If at any point during this workflow, user uploads the required documents and they are handled by KYC Ops manually then the workflow is interrupted. 
+
+So, if on expiration day proof status is anything other than Expired (Approved, Postponed, Submitted, Rejected), then workflow is stopped.
+
+Subsection 3: Expired Documents - Automated Process
+
+Governments worldwide, within the context of combating tax evasion, improving tax transparency and protecting the reliability of the tax system, require financial institutions to collect tax information from their clients and report this information to relevant tax authorities of each country
+
+TABLE OF CONTENTS
+
+Introduction FATCA/CRS 
+New customers that register Viva Wallet and are obligated to FATCA/CRS
+FATCA FORMS 
+CRS FORMS
+ Introduction FATCA/CRS 
+The Foreign Accounts Tax Compliance Act, known as the FATCA, was imposed by the USA and came into force in July 2014. Its aim is to detect, deter and discourage offshore tax evasion by U.S. citizens or residents, who either directly or indirectly, invest outside the USA through foreign financial institutions.
+Several countries, including Greece, signed an Intergovernmental Agreement with the USA (IGA), in order to facilitate the implementation of FATCA provisions by financial institutions in their jurisdictions.
+The Common Reporting Standard, known as the CRS, was promoted by the Organization for Economic Co-operation and Development (OECD) as an additional international initiative based on the development of a single global standard for the automatic exchange of information between tax authorities.
+Several countries, including Greece, have adopted the CRS, with the number of participating countries constantly increasing.
+FATCA - Foreign Account Tax Compliance Act
+FATCA is a regulatory framework, between the Government of the Hellenic Republic and the Government of the United States of America, according to it Greek financial institutions are obliged to identify as “US Persons” clients who are considered citizens or residents of the USA under the law, and to report annually specific information regarding the bank accounts of such clients to the Internal Revenue Service of the USA via the Greek Independent Authority for Public Revenue.
+Law 4493/2017 ratified the Memorandum of Understanding and the Agreement between the Government of the Hellenic Republic and the Government of the United States of America on the improvement of international tax compliance and the application of the Foreign Account Tax Compliance Act (FATCA) aimed at preventing tax evasion.
+For more information concerning the requirements of the FATCA, the customer may visit the website of the Internal Revenue Service (IRS): https://www.irs.gov/ or the website of the Independent Authority for Public Revenue, or consult his/her tax adviser.
+Foreign Account Tax Compliance Act (FATCA) | Internal Revenue Service (irs.gov): https://www.irs.gov/businesses/corporations/foreign-account-tax-compliance-act-fatca
+FATCA tax compliance forms
+The FATCA tax compliance forms can be found here FATCA/CRS | Viva Wallet Support: https://help.vivawallet.com/en/articles/5857106-fatca-crs
+Example: If a customer has created a personal account in Viva Wallet and he/she has US citizenship, then he/she is obliged to FATCA and will be asked to upload (KYC proofs) the corresponding form either during the identification process or in the future.
+In case the customer asks for further information regarding the forms that he/she should fill in, for example which he/she should fill or which fields he/she must fill, we should guide him to contact their tax advisor / accountant, the AADE or the local tax authority.
+CRS - Common Reporting Standard (non US countries that participate CRS): https://www.oecd.org/tax/exchange-of-tax-information/crs-mcaa-signatories.pdf
+The Common Reporting Standard (CRS) of the Organisation for Economic Cooperation and Development (OECD) and the European Council Directive EU/2014/107 DAC2 as regards mandatory automatic exchange of information in the field of taxation aim to tackle tax evasion and ensure tax compliance at an international level.
+The collection and reporting of data is a regulatory obligation that also applies to Greek financial institutions, pursuant to Council Directive.
+If someone has an account or investment products in a country that has adopted the CRS and is a resident of another country that has also adopted the CRS, the financial institution of the former country is under the obligation to report information to its local tax authority. The local tax authority then forwards this information to the tax authority of the country of residency.
+For more information concerning the requirements of the Common Reporting Standard (CRS), the customer may visit the OECD websites on the Automatic Exchange of Information or the website of the Independent Authority for Public Revenue, or consult his/her tax adviser.
+https://www.oecd.org/tax/automatic-exchange/common-reporting-standard/
+Example: If a customer has created a personal account in Viva Wallet and he/she has Swedish citizenship, then he/she is obliged to CRS and will be asked to upload (KYC proofs) the corresponding form either during the identification process or in the future.
+In case the customer asks for further information regarding the forms that he/she should fill in, for example which he/she should fill or which fields he/she must fill, we should guide him to contact their tax advisor / accountant, the AADE or the local tax authority.
+New customers that register Viva Wallet and are obligated to FATCA/CRS
+According to the article BUSINESS ACCOUNT CREATION the customer must follow specific questions and state if they are obligated to FATCA/CRS.
+
+1. Who are you?
+The customer states:
+First name/ Last name
+Father's name (mandatory field only for GR)
+Date of birth
+Country of birth
+City of birth (optional field)
+Nationality. In this field the customer can add more than one nationalities, by selecting +add another nationality
+
+2. U.S Citizenship (FATCA related question). If the customer selects YES, then the customer should fill the SSN (Social security number), format xxx-xx-xxxx or ΙΤΙΝ (Individual Taxpayer Identification Number - ΤΑΧ ID) format: 9xx-xx-xxxx.
+
+3. TAX information: In the next window, the customer needs to state if he/she is tax liable in another country, apart from U.S.A. and mention the TAX-ID number. The customer can add two more countries, as tax residency by selecting +add another tax residency, and mention the country and the TAX-ID.
+
+FATCA FORMS 
+If the customer answers fulfil one of the above criteria,
+
+US citizenship
+US nationality
+US country of birth 
+ID Document issued in US
+ then, in KYC Proofs additional proofs are going to be added that are FATCA related:
+
+The W-9 form
+The W-8BEN form if you are a natural person
+The W-8BEN-E form if you are a legal entity
+For more information concerning the requirements of the FATCA, the customer may visit the website of the Internal Revenue Service (IRS): http://internal%20revenue%20service%20%28irs%29/ or the website of the Independent Authority for Public Revenue, or consult his/her tax adviser.
+
+Some useful links regarding FATCA, we can find in our website and more specifically here:
+
+Foreign Account Tax Compliance Act (FATCA) - Information for customers - Viva Wallet: https://www.vivawallet.com/gr_en/fatca-reporting
+
+What is FATCA? | Viva Wallet Support: https://help.vivawallet.com/en/articles/5951415-what-is-fatca
+
+CRS FORMS
+If the customer in the third question stated that he/she is tax liable in another country, than in the country of his/her residence, then, in KYC Proofs additional proofs are going to be added that are CRS related:
+
+Tax Residency Self-Certification Form - Controlling Persons
+Tax Residency Self-Certification Form - Entities
+Tax Residency Self-Certification Form – Natural Persons
+Proof of TAX-ID
+For more information concerning the requirements of the Common Reporting Standard (CRS), the customer may visit the OECD websites on the Automatic Exchange of Information or the website of the Independent Authority for Public Revenue, or consult his/her tax adviser.
+
+Common Reporting Standard (CRS) - Organisation for Economic Co-operation and Development (oecd.org): https://www.oecd.org/tax/automatic-exchange/common-reporting-standard/
+Some useful links regarding CRS, we can find in our website and more specifically here:
+
+Foreign Account Tax Compliance Act (FATCA) - Information for customers - Viva Wallet: https://www.vivawallet.com/gr_en/fatca-reporting 
+
+What is FATCA? | Viva Wallet Support: https://help.vivawallet.com/en/articles/5951415-what-is-fatca
+
+Subsection 5: Additional Notifications - Reminders
+
+As of 26/8/2020, Merchants will receive 2 additional notifications via email when in Pending state (Levels 4 &5)
+The new notifications will be sent in the form of e-mails.
+
+Section 2: Requests
+Subsection 1: Trade Name and/or Company Name Change Request
+
+Customer requests Trade Name and/or Company Name change: 
+
+If a customer contacts us requesting a Trade Name or Company name change for his business, the request must be escalated to KYC for implementation. 
+
+In case the customer contacts us via Chat/e-mail (registered e-mail):
+Create case & Child case and escalate to KYC Support
+ 
+In case the customer contacts us via Phone or Chat (Lead):
+Ask customer to contact via chat after log or send an e-mail from their registered e-mail, with his/her request.
+
+Escalation 
+Create a parent case, include all the necessary information: 
+Case Title: Trade Name change Request 
+Subject Path: Customer Service>KYC
+Description: Request for change in Trade Name/company name from "Current Trade Name/Company name" to "New Trade Name/Company Name" and justification for the change
+Important Note: The request will be reviewed by KYC and will be implemented, if possible. The reply to customer will take place either via e-mail or on chat, depending on initial communication 
+Escalate (create a child case) to KYC Support
+
+Subsection 2: Change of Account Administrator (Account Detach) - Request
+
+Merchant requests the change of the account administrator (transfer the account to another person) 
+
+If a customer contacts us requesting the change of the account administrator, the request must be escalated to KYC for implementation.
+
+In case the customer contacts us via Chat/e-mail (registered e-mail):
+Create case & Child case and escalate to KYC Support
+ 
+In case the customer contacts us via Phone or Chat (Lead):
+Ask customer to contact via chat after log or send an e-mail from their registered e-mail, with his/her request.
+
+If we get the request from the new account administrator we advise him to: 
+
+1. Create a new personal account which will contain the mobile number to be attached to the existing merchant's account
+
+2. Once the new personal account is created, the new account administrator should reach us over the chat or via E-mail so us to proceed with the implementation of the request.
+
+Escalation 
+Create a parent case, include all the necessary information: 
+Case Title: Account Administrator Change Request  
+Subject Path: Customer Service>KYC
+Description: Request for changing the Account Administrator, Full Name of the person who will take over the account, as well as his new mobile number. 
+Important Note: The request will be reviewed by KYC Support and will be implemented, if possible. 
+Escalate (create a child case) to KYC Support
+3. Close the chat (if this is the mean of communication). The merchant will be informed to his/her registered E-mail address. 
+
+Subsection 3: Account Closure and Transfer of Funds in the event of Viva Wallet's Account Administrator death
+
+In the event of Viva Wallet's account administrator death, the heir or heirs must provide:
+
+1.Death certificate
+2.Heirs Qualification Document
+These documents should be sent via Email to support@vivawallet.com 
+Note: The KYC team will handle the case, and take all the necessary actions (raise a ticket to Legal department, and come back to merchant's heir/heirs if needed).
+The above documents are common for all EU countries and the UK. 
+NO FURTHER ACTIONS NEEDED BY YOUR END. 
+
+Subsection 4: Βusiness Βankruptcy
+
+Follow the guidance below when a merchant reports that his business has gone bankrupt 
+
+Note! When the email is sent from a non registered email address, meaning that it could be sent via the police, lawyer's office or a tax office (SPF Finances in Belgium), the E-mail should be forwarded to KYC Support (through child case, the parent case should be the E-mail). 
+Domains : XXXXXXX@minfin.fed.be tax - office in Belgium (SPF Finances) 
+France: @dgfip.finances.gouv.fr @interieur.gouv.fr @urssaf.fr @gendarmerie.
+In case a merchant discloses that his business has gone bankrupt, you will need to escalate the case (child case) as follows: 
+
+In case the customer contacts us via Chat/e-mail (registered e-mail):
+Create case & Child case and escalate to KYC Support
+ 
+In case the customer contacts us via Phone or Chat (Lead):
+Ask customer to contact via chat after log or send an e-mail from their registered e-mail, with his/her request.
+
+Escalation
+Case Title: Business bankruptcy 
+Subject Path: Customer Service > KYC
+
+Description: Describe the merchant's request, attach the official document certifying the bankruptcy of the company and any useful information on the matter.
+
+Important Note: The request will be processed by KYC and a response will be provided to the customer via email for any further documentation that may be requested. 
+
+Escalate (Create child case) to KYC Support
+
+CLOSE THE CHAT. Inform the merchant that his request has been registered and will receive an update to his registered email address.
+
+Subsection 5: Change of Business Address - Request
+
+Customer requests the change of his business address 
+
+
+If a customer contacts us requesting the change of his business address, the request must be escalated to KYC Support for implementation. 
+
+In case the customer contacts us via Chat/e-mail (registered e-mail):
+Create case & Child case and escalate to KYC Support
+ 
+In case the customer contacts us via Phone or Chat (Lead):
+Ask customer to contact via chat after log or send an e-mail from their registered e-mail, with his/her request.
+
+STEP 1
+
+Ask the merchant to share the old and the new business address and provide an official proof that shows the new business address, the company's name etc.  
+Whether the merchant attaches the official proof or not, continue with the next step:
+
+STEP 2
+
+For United Kingdom, Ireland escalate the chat to "KYC Support UK - IE" on Intercom (if this was the mean of communication).
+For the rest countries, continue with step 3.
+
+STEP 3
+
+Create a child case by following the below guidance: 
+
+Escalation 
+
+Case Title: Change of Business Address Request 
+Subject Path: Customer Service>KYC
+Description: Describe merchant's request, include the old and new business address and attach the proof that you asked (if possible).
+Important Note: The request will be reviewed by KYC and will be implemented, if possible. The reply to customer will take place either via e-mail or chat, depending on initial communication.
+Escalate to KYC Support
+
+STEP 4
+
+For all countries, except United Kingdom and Ireland, inform the merchant that his request has been submitted and will be updated to his registered E-mail adress. Close the chat.
+
+Subsection 6: Employee user requests to become the account administrator
+
+This article presents the guidance that you should follow when an employee user requests to become the account administrator
+
+1. Inform the employee user that the current account administrator must delete him/her from the account as user, and then the account administrator should contact us so as next steps can follow. 
+2. When the account administrator requests the change of the account admin with than existing user, make sure that this employee user has been deleted from the account. If yes, you should proceed with the steps in the following link:Change of Account Administrator (Account Detach) - Request (document360.io): https://viva-wallet.document360.io/docs/change-of-account-administrator-account-detach-request
+
+Subsection 7: Change of Business Activity (MCC) - Request
+
+Customer requests the change of his business activity (MCC)
+
+If a customer contacts us requesting the change of his business activity (MCC), the request must be escalated to KYC Support for implementation. 
+
+In case the customer contacts us via Chat/e-mail (registered e-mail):
+Create case & Child case and escalate to KYC Support
+ 
+In case the customer contacts us via Phone or Chat (Lead):
+Ask customer to contact via chat after log or send an e-mail from their registered e-mail, with his/her request.
+
+STEP 1: Inform the merchant that his request has been registered and proceed to step 2. 
+
+STEP 2: For United Kingdom, Ireland escalate the chat to "KYC Support UK - IE" on Intercom (if this was the mean of communication). 
+For the rest countries, continue with step 3.
+
+STEP 3: Create a child case by following the below guidance: 
+
+Case Escalation with: 
+Case Title: Change of Business Activity Request
+Subject Path: Customer Service>KYC
+Description: Describe merchant's request.
+Important Note: The request will be reviewed by KYC and will be implemented, if possible. The reply to customer will take place either via e-mail or chat, depending on initial communication.
+Escalate to KYC Support
+
+STEP 4: For all countries, except United Kingdom and Ireland, inform the merchant that he will be updated to his registered E-mail adress. Close the chat  (if this was the mean of communication).
+Section 3: Electronic ID
+Subsection 1: Electronic ID Process - Remote ID Verification with Qualified Electronic Signature
+
+What is the Electronic ID proof field?
+Electronic ID proof field is mandatory, in order to obtain the customer's Qualified e-signature. Customer will be asked to read, accept and sign Viva Wallet's respective terms and conditions for each country and new customers will have to go through an unassisted Video process (a Video Session without the presence of a Live Agent).
+
+
+Initially, the new verification process launched in; 
+
+Romania -Monday 18/07/2022
+France - 21/07/2022
+Netherlands - 6/09/2022 
+Hungary, Croatia, Czech Republic, Bulgaria  - 8/09/2022
+for newly registered customers. 
+
+And as of Tuesday 29/11/2022 for the countries below: 
+
+For every jurisdiction, except those who have VideoID as remote onboarding solution, will have the ElectronicID process as the main remote onboarding method.
+
+This means that the following countries will be affected:    
+
+
+Cyprus    
+Denmark 
+Finland 
+Ireland    
+Italy   
+Luxemburg  
+Malta    
+Poland 
+Sweden 
+UK
+Belgium (itsme will be accompanied by Dynamic Selfie for all clients and eID will be an alternative for those who haven't enrolled with itsme) 
+  
+You can also check the Electronic ID process in the video in https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Steps to Complete Account's Verification Process
+A. Accept Terms and Conditions & Provide E-Signature
+Upon selecting the Electronic ID Proof, customer is asked to read and Accept Electronic ID’s terms and conditions (Terms & Conditions, Privacy Policy).
+
+By clicking accept, the Document to be signed will be displayed to the customer.
+User only has to use the Accept Button.
+
+Note:
+It has been reported that on Safari on iOS devices, the document might not be displayed properly. However, the Accept button works properly.
+
+B. Check Requirements screen & Document Upload
+User should ensure that access to device’s camera and microphone has been enabled, or is not blocked by default on the browser’s settings.
+
+Once the settings have been configured, customer is asked to choose the document that he/she wishes to use. The drop down list with the eligible ID documents may differ in each country.  
+The country that should be selected, must be the country where the business operates. 
+
+At the next step, the system informs the user on the requirements to successfully go through the Video ID Process.
+
+C. Unassisted Video process 
+Depending on the selected document, user is asked to follow the instructions and:
+
+a. Show the front side of the selected document
+b. Show the back side of the selected document
+c. Smile at the Camera
+
+Upon the completion of the Video ID process, user is asked to insert his/her phone number in order to receive and submit the OTP Password. 
+Customer will be encouraged to use the mobile phone used for the registration to Viva Wallet.
+
+Process is completed. A success message is displayed to the user and the page is refreshed automatically. 
+No further user actions are required from customer's side.
+At this point, the Video is sent to Electronic ID's backoffice, to undergo the required checks. 
+The Electronic ID process is now completed and customer's account will be verified once he/she has completed all the steps of the verification process. Customer will be informed about the outcome via email and notification in his/hers Viva Wallet account.
+Section 4: Video ID
+Subsection 1: Unsuccessful Video ID Calls - Error Messages
+In case the Video ID call is unsuccessful, the customer is informed with the comments below in his Viva Wallet account user interface
+
+Rule Code	Description EN (Web Portal)
+R001	User is under 18 years old
+R002	Document issue date is after current date
+R003	Expired Document
+R008	Image Selfie Identification Failure
+R014	First Name does not match 
+R016	Last Name does not match
+R045	The Birth Date is not matching
+In case that after the checks performed during the Video ID Call, a photo or a document is rejected, the customer is informed with the comments below in his Viva Wallet account user interface.    
+
+REJECTION REASONS AS THEY APPEAR IN CUSTOMER PORTAL (GR AND en)
+DRR001	Proof of identity not supported e.g. photocopy, partial display etc.
+DRR004_1	Not readable Identity
+DRR005_1	Denied Unsupported Identity
+DRR006_1	All necessary data are not visible on Identity
+DRR007_1	The Identity is of low quality
+DRR008_1	The Identity Document is not in complete capture
+DRR010_1	Possible Identity fraud
+DRR012_1	ID Print copy
+IDVSelfieNotMatch	Image Selfie Identification Failure
+If the Video ID Call fails and the customer asks us if he/ she can try again, we guide him/ her to enter the Viva Wallet account user interface and see if the Video ID field is available.
+
+If yes, we inform them that they should try again following the instructions given (stable internet connection, be in a quiet place, remove glasses, hat etc)
+If not, we inform them that the account's verification is in progress (this is the message that they will also see) and that they will receive a relevant notification as a feed item in their Dashboard page and in written in their registered email address.
+In case the customer objects in terms of the Video ID Call procedure, we inform them that:
+
+Going through the Video ID call steps is mandatory according to the respective regulatory instructions, for the remote electronic identification of the customer, who intends to open a bank account.
+
+Subsection 2: ID Verification Messages
+
+In this link there is a list of the Messages our Merchants will see in each language when going through the ID check either with or without a camera: https://viva-wallet.document360.io/docs/id-verification-messages
+Section 5: Policies per Country
+Subsection 1: KYC Policy Austria
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Sole proprietorship/Freelancers
+
+VIDEO ID 	
+The customer in this proof must proceed with the video ID verification.
+
+The customer must upload ONE of the following:
+
+Austrian passport, OR 
+Austrian driving license, OR 
+Austrian Identity Card (Personalausweis), OR 
+Foreign official photo IDs may be used if they meet the above-mentioned criteria (issued by a public authority, not interchangeable photograph, etc).
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Extract from the Central Register of Residence (Zentrales Melderegister), OR 
+Bank account statement showing an Austrian address (dated in the last 3 months), OR 
+Car or Home Insurance Policy (issued by a reputable Insurance Company based in EEA (dated in the last 3 months), OR 
+A document issued by a governmental body showing an Austrian address (dated in the last 3 months), or
+Tax Declaration or income tax assessment (dated in the last 3 months), OR 
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months)
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please, upload the "GISA-Auszug" (that states the "GISA-Zahl").
+
+For registered farmers, please upload a recent extract from Land- und forstwirtschaftliche Betriebsinformationssystem (LFBIS) registry.
+
+PROOF OF TAX ID 	Extract from IRS, that states the number ATU or UID or TIN
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Income tax assessment, OR 
+Balance sheets, OR 
+Credit documentation or other proof of financing, OR 
+Certificate of business license
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Aktiengesellschaft, AG, Gesellschaft mit beschränkter Haftung, GmbH, Kommanditgesellschaft, KG,  GMBH, Offene Gesellschaft, OG
+
+VIDEO ID 	
+The customer in this proof must proceed with the video ID verification.
+
+The customer must upload ONE of the following:
+
+Austrian passport, OR 
+Austrian driving license, OR 
+Austrian Identity Card (Personalausweis), OR 
+Foreign official photo IDs may be used if they meet the above-mentioned criteria (issued by a public authority, not interchangeable photograph, etc).
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Extract from the Central Register of Residence (Zentrales Melderegister), OR 
+Bank account statement showing an Austrian address (dated in the last 3 months), OR 
+Car or Home Insurance Policy (issued by a reputable Insurance Company based in EEA (dated in the last 3 months), OR 
+A document issued by a governmental body showing an Austrian address (dated in the last 3 months), OR 
+Tax Declaration or income tax assessment (dated in the last 3 months), OR 
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months)
+PROOF OF BUSINESS ESTABLISHMENT	
+Please, upload ONE of the following:
+
+Extract from the commercial register, OR 
+Extended extract from the register of beneficial owners
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+PROOF OF TAX ID 	
+Extract from IRS, that states the number ATU or UID or TIN
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA (OPTIONAL)	Please upload the following documents: 
+Proof of Identity
+Proof of Residence
+Proof of Occupation
+ECONOMIC PROFILE (OPTIONAL)	
+For Aktiengesellschaft, AG, Kommanditgesellschaft, KG
+
+Please upload ONE of the following documents:
+
+Income tax assessment, OR 
+Balance sheets, OR 
+Credit documentation or other proof of financing, OR 
+Certificate of business license
+For Gesellschaft mit beschränkter Haftung, GmbH and  GMBH
+
+Please upload ONE of the following documents:
+
+
+Income tax assessment, OR 
+Balance sheets, OR 
+Credit documentation or other proof of financing
+
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 2: KYC Policy Belgium
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+ITSME AND DYNAMIC SELFIE 
+OR ELECTRONIC ID (FOR THOSE NOT ENROLLED WITH ITSME)
+
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in the following link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 
+For proof of residence, the customer must upload ONE of the following:
+
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 6 months), OR
+Certificate of registration in the population register of his place of residence, OR 
+Certificate of registration in the register of foreigners, OR 
+Rent receipt, OR 
+Letters from Public Authorities and Institutions (e.g. a court, credit card bills or statements), OR 
+Bank statements, OR 
+Social insurance statements, OR 
+One-off bank letters, OR 
+Insurance policy for car or home 
+PROOF OF BUSINESS ESTABLISHMENT 
+For proof of business establishment, the customer must upload an integral extract from the BCE, not older than 30 days.
+POWER OF REPRESENTATIVES (OPTIONAL)
+Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+ECONOMIC PROFILE (OPTIONAL)
+Please upload ONE of the following documents:
+
+Recent audited financial statements, if available OR 
+Recent management accounts
+CBD (OPTIONAL)
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+SOCIETE ANONYME (S.A. / N.V.), SOCIETE PRIVEE A RESPONSABILITE LIMITEE (S.P.R.L. / B.V.B.A.) ¨Η S.P.R.L., SOCIETE COOPERATIVE A RESPONSABILITE LIMITEE (S.C.R.L. / C.B.V.A.), SOCIETE EN COMMANDITE PAR ACTION (S.C.A. / C.V.A.), SOCIETE EN COMMANDITE SIMPLE (S.C.S. / G.C.V.), SOCIETE EN NOM COLLECTIF (S.N.C. / V.O.F.), BRANCH
+
+
+ITS ME AND DYNAMIC SELFIE 
+OR ELECTRONIC ID (FOR THOSE NOT ENROLLED WITH ITSME)
+
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in this link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 
+For proof of residence, the customer must upload ONE of the following:
+
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 6 months), OR
+Certificate of registration in the population register of his place of residence, OR 
+Certificate of registration in the register of foreigners, OR 
+Rent receipt, OR 
+Letters from Public Authorities and Institutions (e.g. a court, credit card bills or statements), OR 
+Bank statements, OR 
+Social insurance statements, OR 
+One-off bank letters, OR 
+Insurance policy for car or home 
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION 
+For this proof, the customer must upload ONE of the following documents:
+
+Latest coordinated statutes (Articles of Association), OR
+The updated statutes of the company / legal person, OR that have been lodged with the Commercial Court or published in the annexes of the Belgian Official Gazette, OR
+Recent extract from the registry.
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+PROOF OF OWNERSHIP
+English
+
+Please upload the BO declaration, duly signed by the legal representative(s), which can be found here:
+
+https://help.vivawallet.com/en/articles/5148689-what-is-the-beneficial-ownership-declaration-and-why-should-i-submit-it
+
+French
+
+Veuillez télécharger le formulaire de déclaration des bénéficiaires effectifs dûment complété et signé par le(s) représentant(s) légal(aux) de votre société, dont vous trouverez un exemplaire ici: 
+
+https://help.vivawallet.com/fr/articles/5148689-qu-est-ce-que-la-declaration-de-propriete-effective-et-pourquoi-dois-je-la-soumettre 
+
+Dutch
+
+Upload het UBO-verklaring, ondertekend door de wettelijke vertegenwoordiger(s), waarvan u hier een exemplaar vindt:
+
+Wat is een Verklaring van Uiteindelijk Gerechtigden en waarom ben ik verplicht deze in te dienen? | Viva Wallet Support
+
+PROOF OF REPRESENTATION 
+For the proof of representation, we ask for the customer to upload the publication of the appointment of the legal representative from the Belgian Official Gazette, or a respective power of attorney or the CBE/BCE extract.
+POWER OF REPRESENTATIVES (OPTIONAL) 
+Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+ECONOMIC PROFILE (OPTIONAL)
+Please upload ONE of the following documents:
+
+Recent audited financial statements, if available OR 
+Recent management accounts
+CBD (OPTIONAL)
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support 
+
+Subsection 3: KYC Policy Bulgaria
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Sole proprietorship/Freelancers
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in this link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+For Bulgarian citizens:
+
+Medical card, not older than 1 year, OR
+Driving license, not older than 1 year, OR 
+Utility bills, not older than 3 months, OR 
+Certificate of residence, OR 
+Also accepted is an Bulgarian ID Card
+For non-Bulgarian citizens:
+
+Up to 90 days stay
+
+a) EU citizens are free to stay up to 90 days in BG
+
+b) non- EU must register upon arrival (address registration form) and have 90 days too.
+
+After 90 days -a residence certificate. Residence certificate is a document which grants you the right to stay in Bulgaria for more than 90 days.
+
+After 90 days
+
+Residence/staying document-alone or together with bills for said address, OR
+Address that is stated on his identification document alone or together with bill for said address, OR 
+There is lease agreement for at least 6 months prior period-preferably notarized for an BG address OR 
+Certificate of BG tax authority.
+
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please, upload ONE of the following documents:
+
+- Certificate of Good Standing, OR Incorporation Certificate, OR Extract from the relevant register of their current status
+
+AND
+
+Memorandum of Association /Articles of Association, AND
+License, permit or registration (if applicable)
+PROOF OF REPRESENTATION (OPTIONAL)	Please, upload a Power of attorney, duly signed by the legal representative.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest (audited) financial reports, OR
+Donation contract AND Certificate from the donor explaining the reason for the donation AND Tax declaration/other official document, specifying the source of wealth of the donor, OR 
+Lease contract, OR 
+Document proving the receiving of the income
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+
+LLC- Limited Liability Company, General Partnership, Limited Partnership, SMLLC - Single-member Limited Liability Company
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in the following link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+For Bulgarian citizens:
+
+Medical card, not older than 1 year
+Driving license, not older than 1 year
+Utility bills, not older than 3 months
+Certificate of residence
+Also accepted is an Bulgarian ID Card
+
+For non-Bulgarian citizens:
+
+Non-Bulgarian Citizens
+
+Up to 90 days stay
+
+a) EU citizens are free to stay up to 90 days in BG
+
+b) non- EU must register upon arrival (address registration form) and have 90 days too.
+
+After 90 days -a residence certificate. Residence certificate is a document which grants you the right to stay in Bulgaria for more than 90 days.
+
+After 90 days
+
+Residence/staying document-alone or together with bills for said address, OR
+
+Address that is stated on his identification document alone or together with bill for said address, OR
+
+There is lease agreement for at least 6 months prior period-preferably notarized for an BG address, OR 
+
+Certificate of BG tax authority.
+PROOF OF BUSINESS ESTABLISHMENT	
+Please upload ONE of the following documents: 
+
+- Certificate of Good Standing, OR Incorporation Certificate, OR Extract from the relevant register of their current status
+
+AND
+
+- Memorandum of Association /Articles of Association, AND
+
+- License, permit or registration (if applicable)
+
+PROOF OF UBO/OWNERSHIP 	
+Please, upload an extract of the 'Actual Owner' from the Registry Agency
+
+PROOF OF REPRESENTATION (OPTIONAL)	Please, upload a Power of attorney, duly signed by the legal representative.
+Associated person verification /UBO Data (MANDATORY IF APPLICABLE)
+Please, upload the following documents:
+
+Proof of ID (Valid ID card, passport etc.)
+Proof of residence (utility bill etc.)
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following documents:
+
+Latest (audited) financial reports, OR
+Donation contract AND Certificate from the donor explaining the reason for the donation AND Tax declaration/other official document, specifying the source of wealth of the donor, OR
+Lease contract, OR
+Document proving the receiving of the income
+
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 4: KYC Policy Croatia
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+ 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+PLEASE CONSULT THE LIST BELOW 
+
+Sole proprietorship/Freelancers
+Fizička osoba, obrtnik i osoba koja obavlja obavlja drugu samostalnu djelatnost.
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in the following link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For Croatian citizens:
+
+Please, upload ONE of the following:
+
+ID under 1 year, OR
+Driver's license under 1 year, OR
+Certificate of residence under 3 months, OR
+Birth certificate under 1 year, OR
+Voluntary/mandatory health insurance card under 1 year, OR
+Sheet or certificate of paid tax under 1 year, OR
+Utility bill of the place of residence under 3 months. 
+For non-Croatian citizens, please upload a valid residence permit (long term/temporary/permanent).
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+For this proof, the customer must upload an extract from the related registry of self-employed persons (e.g. craftsman, lawyer…), not older than 3 months.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest Financial Statements, not older than 2 years. OR
+Management Accounts issued in the last 6 months, OR signed by the accountant of the company. This applies for start-up companies which don't have Financial Statements, OR
+Income declaration for natural persons, OR
+Self income declaration for natural persons
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Legal Entities
+Dioničko društvo-d.d., Društvo s ograničenom odgovornošću-d.o.o., Javno trgovačko društvo-jt.d., Komanditno društvo, Gospodarsko interesno udruženje, Druge pravne osobe/entitet izjednačen sa pravnom osobom.
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in this link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For Croatian citizens:
+
+Please, upload ONE of the following:
+
+ID under 1 year, OR
+Driver's license under 1 year, OR
+Certificate of residence under 3 months, OR
+Birth certificate under 1 year, OR
+Voluntary/mandatory health insurance card under 1 year, OR
+Sheet or certificate of paid tax under 1 year, OR
+Utility bill of the place of residence under 3 months. 
+For non-Croatian citizens, please upload a valid residence permit (long term/temporary/permanent).
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For this proof, the customer must upload an extract from the relevant commercial registry under 3 months. In addition to that, he/she needs to upload o UBO registry document issued within 3 months.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+PROOF OF REPRESENTATION 	
+For this proof, the customer needs to provide us with the following documents:
+
+Extract from the relevant registry or other relevant document if such register does not exist-under 3 months.
+A true copy of the Power of Attorney if account is to be opened by someone else other than legal representative that is authorized for sole and independent representation.
+COMPANY'S STRUCTURE (OPTIONAL)	If this proof is required, then the customer must upload the shareholding structure of the company, including any shareholder who holds more than a 25% percentage of ownership up to the last natural person, duly signed by the legal representative.
+ASSOCIATED PERSON VERIFICATION / UBO DATA (MANDATORY IF APPLICABLE)
+Please upload ONE of the following documents:
+
+- National ID for Croatian citizen, OR
+
+- Proof of ID for EU/EEA citizen, OR
+
+- Valid Passport
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest Financial Statements, not older than 2 years. OR
+Management Accounts issued in the last 6 months, OR signed by the accountant of the company. This applies for start-up companies which don't have Financial Statements, OR
+Income declaration for natural persons, OR
+Self income declaration for natural persons
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 5: KYC Policy Cyprus
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+INTERNAL INFORMATION:
+
+The "Company Search" document can be issued within one hour, online from the DEPARTMENT OF REGISTAR OF COMPANIES. 
+The documents below will be also provided by all newly registered merchants 
+You may check different samples of the documents by clicking here.
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+Useful Information:
+
+The Tax Declaration Form, can be issued by TAX Department (Τμήμα Φορολογίας) Taxt Department | Home Page: https://www.mof.gov.cy/mof/tax/taxdep.nsf/index_en/index_en?opendocument (mof.gov.cy) / TAXISnet (mof.gov.cy): https://taxisnet.mof.gov.cy/login.jsp
+
+The Corporate Documents 
+
+Certificate of Shareholders
+Certificate of Directors & secretary 
+Certificate of Incorporation
+Certificate of Change of name
+Certificate of Good standing
+Can be issued by Department of Registrar of Companies and Intellectual Property (Τμήμα Εφόρου Εταιρειών) Companies Section, Department of Registrar of Companies and Intellectual Property: https://www.companies.gov.cy/en/
+
+KYC Policy Sample Documents for Cyprus:
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+INTERNAL INFORMATION:
+Please bare in mind that the sanitization project will take effect as of Wednesday 18th of May, 2022. You may receive several queries from existing merchants in Cyprus. 
+More specifically, during the sanitization project several merchants may be asked to provide recently issued documents that are stated in the tables below. Apart from the documents, they may be requested to upload the "Company Search" document, which must be issued within the last month. 
+The "Company Search" document can be issued within one hour, online from the DEPARTMENT OF REGISTAR OF COMPANIES. 
+The documents will also be provided by all newly registered merchants in Cyprus as of Wednesday 18th of May, 2022
+Useful Information:
+
+The Tax Declaration Form, can be issued by TAX Department (Τμήμα Φορολογίας) Taxt Department | Home Page (mof.gov.cy) / TAXISnet (mof.gov.cy) 
+The Corporate Documents 
+
+Certificate of Shareholders
+Certificate of Directors & secretary 
+Certificate of Incorporation
+Certificate of Change of name
+Certificate of Good standing
+Can be issued by Department of Registrar of Companies and Intellectual Property (Τμήμα Εφόρου Εταιρειών) Companies Section, Department of Registrar of Companies and Intellectual Property: https://www.companies.gov.cy/en/
+
+Type samples exist here: https://viva-wallet.document360.io/docs/kyc-policy-cyprus-sample-documents
+
+PLEASE CONSULT THE LIST BELOW
+
+LIST ITEM 1: FREELANCERS/PROFESSIONALS 
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Recent utility bill, not older than 6 months, OR
+Bank Statement (not older than 6 months), OR
+Valid housing insurance document, OR
+Payment receipt of municipal taxes, where the current residence address (δημοτικά τέλη, π.χ. τέλη σκυβάλων)
+PROOF OF BUSINESS ESTABLISHMENT 	
+For Proof of Business Establishment, please upload ONE of the following:
+
+Certificate of Company’s Registration GR: Πιστοποιητικό Εγγραφής στο Μητρώο, OR
+Certificate of Company’s Registered Office GR: Πιστοποιητικό Εγγεγραμμένης Επαγγελματικής Διεύθυνσης, OR
+Recent payment receipt of the social securities obligation GR:  Πρόσφατο Αποδεικτικό Εξόφλησης Υποχρέωσης Κοινωνικών Υποθέσεων
+*In case of the individual’s profession is a special category of self-employed professionals, a certificate from one of the respective supervisory associations is required:
+
+DELC (Dental Limited Company)
+DLC (Doctor Limited Company)
+LLC (Lawyers Limited Company)
+**In case of a taxi-driver, the following are required:
+
+MAIN DOCUMENT 	ALTERNATIVE DOCUMENT 
+Urban Taxi road use license	In case the customer is an employee of a taxi company then payslip is allowed showing in the payslip name of the employer
+Certificate of Insurance of the Taxi (in the name of the customer/freelancer)	In case the taxi driver is employee of a taxi company then the insurance certificate should be under the name of the company or the company’s owner
+Tax declaration form	 A social insurance statement  OR  A Self - declaration form stating that the merchant does not have a tax declaration form 
+VAT Return Form	
+a.    If the customer is an employee such documentation (VAT Return Form) is considered N/A 
+
+b.    A self-declaration form stating that his annual turnover is less than the acceptable amount and does not have a VAT Return Form
+
+
+ECONOMIC PROFILE	
+Self-Income declaration for natural persons (i.e., income tax returns, VAT returns/forms, Social Insurance statements, etc.)
+If any of the above is not available, then the below information is required:
+
+A resolution signed by the self-employer, declaring the turnover, income, expenses and profit of the Business, for the last year.
+AND
+
+Invoices/receipts from the sales justifying the declared turnover/income in the resolution above.
+CBD LAB REPORTS (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support
+PROOF OF TAX ID (OPTIONAL)	
+In this proof we ask for the customer to upload ONE of the following documents: 
+
+The most recent Natural person-Income Tax self-assessment, OR
+The most recent Entity-Tax Self-assessment
+PROOF OF OCCUPATION OPTIONAL / (In the event that the person that created the account is not the legal representative/director of the company) 	
+Regarding employees:
+
+ONE of the following: 
+
+Valid employment contract, OR
+Recent pay slip, not older than 3 months
+
+LIST ITEM 2: PRIVATE OR PUBLIC COMPANY & COOPERATIVE COMPANY & GP - OR LP
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Recent utility bill, not older than 6 months, OR
+Valid housing insurance document, OR
+Payment receipt of municipal taxes, where the current residence address (δημοτικά τέλη, π.χ. τέλη σκυβάλων)
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING AND REPRESENTATION 	
+Certificate of Incorporation GR:  Πιστοποιητικό Σύστασης
+Certificate of Registered Office GR: Πιστοποιητικό Διεύθυνσης (Εταιρείας)
+Recent Certificate of Directors and Secretary (no older than 12 months)* GR:  Πρόσφατο Πιστοποιητικό Διευθυντών και Γραμματέα
+Recent Certificate of Shareholders (no older than 12 months)*  GR:  Πρόσφατο Πιστοποιητικό Μετόχων
+Memorandum & Articles of Association and its amendments, certified by a lawyer or a notary GR:  Καταστατικό καθώς και τυχόν τροποποιήσεις αυτού με θεώρηση δικηγόρου ή συμβολαιογράφου
+Note!
+In case a customer faces issues with the uploading of this document, we can advise him/ her to use a pdf resizer in case the pdf exceeds the size limit or to upload the document in parts. 
+Recent Certificate of Good Standing (no older than 12 months)  GR:  Πρόσφατο Πιστοποιητικό Καλής Λειτουργίας
+Certificate of Change of Name (if applicable/only if the company has changed the company name) GR:  Πιστοποιητικό Αλλαγής Ονόματος 
+ECONOMIC PROFILE 	
+
+Latest available audited Financial Statements, not older than 2 years (i.e., submitted within the 2 previous financial reporting periods)
+Management Accounts OR Trial Balance issued in the last 6 months signed by the accountant of the Company. This applies to start-up Companies which do not have Financial Statements. 
+EXPLANATION: 
+Management Accounts are financial reports produced for the business owners and managers, generally monthly or quarterly, normally a Profit & Loss report and a Balance Sheet. In principle they are similar to Year End accounts but are less formal and are personalized to the user's requirements. 
+CBD LAB REPORTS
+(OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+Power of Representatives (OPTIONAL) 
+
+
+
+Board of Directors resolution, certified by the company’s secretary, authorizing the issuance of the PoA/PoR, for the opening of an account and naming the persons authorized to operate the account GR:  Απόφαση του Διοικητικού Συμβουλίου, πιστοποιημένη από τον Γραμματέα του Δ.Σ., όπου αναφέρονται η απόδοση πληρεξουσιότητας το άνοιγμα του λογαριασμού και τα ονόματα των ατόμων που εξουσιοδοτούνται να λειτουργούν τον εν λόγω λογαριασμό.
+Shareholding (Group) Structure
+(OPTIONAL) 	Group Structure, showing clearly the percentages and the UBO, duly signed by the legal representative of the Company GR:  Εταιρική Δομή/Πληροφορίες για τη δομή της ιδιοκτησίας, τις αρμοδιότητες και τους πραγματικούς δικαιούχους-αν υπάρχουν), υπογεγραμμένη από τον νόμιμο εκπρόσωπο. 
+Proof of Tax-ID (OPTIONAL)	
+In this proof we ask for the customer to upload ONE of the following documents:   
+
+The most recent Natural person-Income Tax self-assessment, OR
+The most recent Entity-Tax Self-assessment
+Proof of occupation
+(OPTIONAL)	
+In case the authorized administrator is different person from the legal representative of the company, then we ask from that natural person to upload as well ONE of the following documents:
+
+Valid employment contract, OR
+Recent pay slip, not older than 3 months
+Proof of UBO Ownership (OPTIONAL)	
+In this proof we ask the customer to upload the following documents:
+
+Extract from the Beneficial Ownership Register OR a Beneficial Owners declaration GR:  Απόσπασμα από το Μητρώο Πραγματικών Δικαιούχων Εταιρειών και άλλων νομικών οντοτήτων ή δήλωση πραγματικών δικαιούχων), AND
+A declaration with the names of the nominee shareholders, duly signed by the legal representative Declaration of Trust) GR:  Υπεύθυνη Δήλωση με τα ονόματα των διορισμένων μετόχων, υπογεγραμμένη από το νόμιμο εκπρόσωπο. 
+
+LIST ITEM 3: ADDITIONAL DOCUMENTS FOR LEGAL REPRESENTATIVES (either UBO, director, secretary or any other third party) 
+
+For:
+
+Legal representative(s) (in case this person(s) is not the authorized admin)
+Shareholders/ Beneficial owners who own ≥ 25% of shares
+Secretary(ies)
+The KYC team will ask for them to upload:
+
+Proof of ID (passport, id card etc.) / consult the table above 
+Proof of residence / consult the table above 
+If the shareholders of our customer are entities (not natural persons) ≥ 25%  staking, the:
+
+a. Certificate of Shareholders and
+b. Certificate of Directors & Secretary
+are also required. 
+
+LIST ITEM 4: Business / Legal Entities
+
+BUSINESS NAME 
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found in this link for Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Recent utility bill, not older than 6 months, OR
+Bank Statement (not older than 6 months), OR
+Valid housing insurance document, OR
+Payment receipt of municipal taxes, where the current residence address.
+PROOF OF BUSINESS ESTABLISHMENT 	
+Certificate of Registration GR:  Πιστοποιητικό Εγγραφής στο Μητρώο
+Documentary evidence of the address of the Business (utility bill in the name of the Business as a proof of address GR:  Λογαριασμός κοινής ωφελείας στο όνομα της επιχείρησης ως απόδειξη διεύθυνσης, OR 
+Certificates of Companies Registered Office Address GR: Πιστοποιητικό Εγγεγραμμένης Επαγγελματικής Διεύθυνσης
+ECONOMIC PROFILE 	
+In case we have more than one natural person (Meaning that the authorized administrator defers from the company owner)
+
+Self-Income declaration for natural persons (i.e., income tax returns, VAT returns/forms, Social Insurance statements, etc.)
+If any of the above is not available, then the below information is required:
+
+A resolution signed by the self-employer, declaring the turnover, income, expenses and profit of the Business, for the last year.
+Invoices/receipts from the sales justifying the declared turnover/income in the resolution above.
+CBD LAB REPORTS (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+PROOF OF TAX ID (OPTIONAL)	
+In this proof we ask for the customer to upload ONE of the following documents: 
+
+The most recent Natural person-Income Tax self-assessment, OR
+The most recent Entity-Tax Self-assessment
+PROOF OF OCCUPATION OPTIONAL / (In the event that the person created the account is not the legal representative/director of the company) 	
+Regarding employees:
+
+Valid employment contract, OR
+Recent pay slip, not older than 3 months
+
+Subsection 6: KYC Policy Czech Republic
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+ 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Sole proprietorship/Freelancers
+Fyzická Osoba podnikající 
+
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+
+
+PROOF OF RESIDENCE 	
+Please upload ONE of the following documents:
+
+Phone or utility bill not older than 3 months, OR
+Certificate of registration, OR
+Residence card
+PROOF OF BUSINESS ESTABLISHMENT 	
+For this proof, the customer must upload an extract from the commercial registry (Vypis), not older than 6 months
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Most recent Financial Statements (audited, if applicable), OR
+Management accounts, not older than 6 months
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Společnost s ručením omezeným s.r.o. Veřejná obchodní společnost v.o.s Komanditní společnost k.s. Akciová společnost a.s. Družstvo
+
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+Please upload ONE of the following documents:
+
+Phone or utility bill not older than 3 months, OR
+Certificate of registration, OR
+Residence card
+PROOF OF BUSINESS ESTABLISHMENT, OWHNERSHIP & REPRESENTATION	
+For this proof, the customer must upload an extract from the commercial registry (Vypis), not older than 6 months
+
+PROOF OF UBO/OWNERSHIP	
+Please, upload an extract from the UBO registry not older than 6 months
+
+SHAREHOLDING STRUCTURE (OPTIONAL)	
+Upload the shareholding structure of the entity, mentioning percentages of ownership and countries of establishment, up to the last natural person. The document should be duly signed by the legal representative.
+
+ASSOCIATED PERSON VERIFICATION (OPTIONAL)
+For shareholders with shares ≥ 25 % we should ask the customer to upload the following documents regarding these shareholders to verify the account:
+
+Proof of ID (passport, ID card etc.)
+Proof of Residence (utility bill etc.)
+ASSOCIATED PERSON VERIFICATION / UBO DATA (MANDATORY IF APPLICABLE)	
+Please, upload the following:
+
+Proof of ID (passport, ID card etc)
+Proof of Residence (utility bill etc.)
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Most recent Financial Statements (audited, if applicable), OR
+Management accounts, not older than 6 months
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 7: KYC POLICY Denmark
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+
+
+PROOF OF RESIDENCE 	
+For proof of Tax- ID we ask for the customer to upload ONE of the following documents: 
+
+Danish Health Card, OR
+Utility bill, not older than 3 months, OR
+Tax statement.
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For proof of residence the customer should upload ONE of the following documents: 
+
+Transcript from the Danish Business Registry or similar registry maintained by the official authorities or other reliable sources containing the basic company information, OR
+Articles of Association (Vedtægter or Fundats (the latter for foundations), OR
+Corporate certificates (good standing etc.), constitutive documents or other documents issued by reliable sources containing the company information (issued no more than 6 months ago).
+
+POWER OF REPRESENTATIVES (OPTIONAL)	Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following:
+
+Latest Financial Statements, not older than 2 years, OR
+Management Accounts issued in the last 6 months signed by the accountant of the company, that have not Financial Statements yet, OR 
+Tax declaration for sole proprietors
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+
+
+PROOF OF RESIDENCE	
+For proof of Tax- ID we ask for the customer to upload ONE of the following documents: 
+
+Danish Health Card, OR
+Utility bill, not older than 3 months, OR
+Tax statement.
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For proof of the customer should upload ONE of the following documents:
+
+Transcript from the Danish Business Registry or similar registry maintained by the official authorities or other reliable sources containing the basic company information, OR
+Articles of Association (Vedtægter or Fundats (the latter for foundations), OR
+Corporate certificates (good standing etc.), constitutive documents or other documents issued by reliable sources containing the company information (issued no more than 6 months ago).
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+PROOF OF REPRESENTATION
+(OPTIONAL)	For Proof of representation the customer should upload ONE of the following documents:
+
+Transcript from the Danish Business Registry or similar registry maintained by the official authorities or other reliable sources containing the basic company information, OR
+Articles of Association (Vedtægter or Fundats (the latter for foundations), OR
+Corporate certificates (good standing etc.), constitutive documents or other documents issued by reliable sources containing the company information (issued no more than 6 months ago).
+PROOF OF SHAREHOLDING STRUCTURE
+(OPTIONAL) 	
+For Proof Shareholding structure the customer should upload:
+
+The shareholding structure, duly signed by the legal representative, that shows the percentages of ownership up to the last natural person.
+POWER OF REPRESENTATIVES (OPTIONAL)	Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+UBO DATA (Associated person verification proof)	
+Please, upload the following documents:
+
+- Proof of ID (valid passport OR driver's license)
+- Proof of Residence (health card OR utility bill)
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following:
+
+Latest Financial Statements, not older than 2 years, OR
+Management Accounts issued in the last 6 months signed by the accountant of the company, that have not Financial Statements yet, OR 
+Tax declaration for sole proprietors
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 8: KYC Policy Finland
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+Toiminimi
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process.
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+A utility bill, not older than 3 months, OR
+A certificate of address.
+
+PROOF OF BUSINESS ESTABLISHMENT AND REPRESENTATION	
+For proof of business establishment, we ask for an extract from the Trade Registry (Patent and Registration Office), not older than 6 months.
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload the last audited financial statements, if available, otherwise latest management accounts.
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Osakeyhtiö, Julkinen osakeyhtiö, Kommandiittiyhtiö, Avoin yhtiö, Rekisteröity yhdistys, Säätiö, Ulkomaisen yhtiön sivuliike
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+A utility bill, not older than 3 months, OR
+A certificate of address.
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For proof of business establishment, we ask for an extract from the Trade Registry (Patent and Registration Office), not older than 6 months.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+UBO DATA (Associated person verification proof) / Mandatory if applicable	
+Please, upload ONE of the following:
+
+- Valid ID card
+- Valid Passport
+PROOF OF OWNERSHIP 	
+In this proof, the customer must upload an extract from the UBO registry or the BO declaration, duly signed by the legal representative.
+
+PROOF OF REPRESENTATION	
+For proof of representation the customer must upload ONE of the following documents:
+
+Power of attorney, in which authorization is appointed to the legal representative, OR
+Minutes of the BoD meeting, in which authorization is appointed to the legal representative.
+
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload the last audited financial statements, if available, otherwise latest management accounts.
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 9: KYC Policy France
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+Proof of Solemn Statement: Solemn Statement regarding modification or no-modification of the submitted information | Viva Wallet Support 
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Individual Business/Freelancers
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process.
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Utility bill not older than 3 months, OR
+Rent receipt dated less than 3 months, OR
+Tax notice (Avis imposition- last year's), OR
+Home insurance contract dated less than 3 months. 
+PROOF OF BUSINESS ESTABLISHMENT 	
+For this proof, the customer must upload ONE of the following documents:
+
+The INSEE registration document mentioning the SIRET Number, OR
+The K-bis extract (from the trade and companies register) for auto-entrepreneurs, OR 
+The D1 extract for artisans.
+COMPANY'S STRUCTURE (OPTIONAL)
+If this proof is required, then the customer must upload the shareholding structure of the company, including any shareholder who holds more than a 25% percentage of ownership up to the last natural person, duly signed by the legal representative.
+PROOF OF TAX-ID 	A tax return notice (avis d'imposition) where the numéro fiscal is mentioned
+ECONOMIC PROFILE (OPTIONAL)	
+The most recent tax return notice (avis d'imposition) all the pages
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities (I)
+Société à Responsabilité Limitée (SARL)
+Société par actions simplifiée (SAS)
+Société Anonyme
+
+ELECTRONIC ID
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process.
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Utility bill not older than 3 months, OR
+Rent receipt dated less than 3 months, OR
+Tax notice (Avis imposition- last year's), OR
+Home insurance contract dated less than 3 months. 
+PROOF OF BUSINESS ESTABLISHMENT	
+For this proof, the customer must upload ONE of the following documents:
+
+KBIS (Incorporation certificate) dated less than 3 months, OR
+By laws (“statut”) of the company.
+COMPANY'S STRUCTURE (OPTIONAL)
+If this proof is required, then the customer must upload the shareholding structure of the company, including any shareholder who holds more than a 25% percentage of ownership up to the last natural person, duly signed by the legal representative.
+PROOF OF UBO/OWNERSHIP	
+For proof of UBO/Ownership, we ask for the customer to upload a BO declaration, which can be found here: What is the Beneficial Ownership Declaration and why should I submit it? (Qu'est-ce que la déclaration de propriété effective et pourquoi dois-je la soumettre?)
+
+UBO DATA (Associated person verification proof) / Mandatory if applicable 
+Please, upload the following:
+
+1) Proof of Identity:
+
+• Valid Passport, or
+
+• Valid National ID, or
+
+• Valid Resident permit
+
+2) Proof of Residence
+
+• Utility bill dated less than 3 months. The utility bills accepted include : Telephone bill (or subscription contract), Electricity/ Gas/ water bill (or subscription contract), or
+
+• Tax Notice (Avis imposition), or
+
+• Home insurance monthly payment receipt (or subscription contract), or
+
+• Rent receipt (Quittance de loyer) dated less than 3 months
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Financial statements, OR
+Annual Accounts, OR
+Annual tax declaration
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 3: Legal Entities (II)
+Société en nom collectif (SNC)
+Succursale
+EURL
+SELARL
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process.
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Utility bill not older than 3 months, OR
+Rent receipt dated less than 3 months, OR
+Tax notice (Avis imposition- last year's), OR
+Home insurance contract dated less than 3 months. 
+PROOF OF BUSINESS ESTABLISHMENT	
+For this proof, the customer must upload ONE of the following documents:
+
+KBIS (Incorporation certificate) dated less than 3 months, OR
+By laws (“statut”) of the company.
+COMPANY'S STRUCTURE (OPTIONAL)
+If this proof is required, then the customer must upload the shareholding structure of the company, including any shareholder who holds more than a 25% percentage of ownership up to the last natural person, duly signed by the legal representative.
+PROOF OF TAX ID 	For this proof, the customer should upload an extract from the competent tax authority (Avis d'imposition).
+PROOF OF UBO/OWNERSHIP (OPTIONAL)	
+For proof of UBO/Ownership, we ask for the customer to upload a BO declaration, which can be found here: What is the Beneficial Ownership Declaration and why should I submit it? (Qu'est-ce que la déclaration de propriété effective et pourquoi dois-je la soumettre?)
+
+UBO DATA (Associated person verification proof)
+Please, upload the following:
+
+1) Proof of Identity:
+
+• Valid Passport, or
+
+• Valid National ID, or
+
+• Valid Resident permit
+
+2) Proof of Residence
+
+• Utility bill dated less than 3 months. The utility bills accepted include : Telephone bill (or subscription contract), Electricity/ Gas/ water bill (or subscription contract), or
+
+• Tax Notice (Avis imposition), or
+
+• Home insurance monthly payment receipt (or subscription contract), or
+
+• Rent receipt (Quittance de loyer) dated less than 3 months
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Financial statements, OR
+Annual Accounts, OR
+Annual tax declaration
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 10: KYC Policy Germany
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+Proof of Residence is optional for Germany. If the customer is informed via KYC proofs to upload this then he/she should upload:
+
+Utility Bill (Internet, Telephone, electricity) under the name of the firm's Managing Director (Owner) OR , 
+Self declaration OR, 
+German ID or Extract from residence registry (for registered persons)
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Sole proprietorship/Freelancers
+(Einzelunternehmen & Freiberufler)
+VIDEO ID 	
+For Video ID the customer must conduct a video ID session with an agent and show a valid official identification document issued by a public authority with the picture of the individual and an expiration date.
+
+EU passport, OR 
+EU Identity Card, OR 
+Residence Permit*
+*Residence Permit: If it's not a EU-person we request the EU passport 
+The customer in this proof must upload a photo of the Identification document and a selfie photo.
+PROOF OF TAX ID 	
+For proof of Tax- ID we ask for the customer to upload ONE of the following documents: 
+
+A letter by the competent tax authority to your firm, where the Tax Number (Steuernummer) is stated (not older than 12 months), OR
+Articles of Association that state the date of firm's establishment (only for new businesses).
+
+PROOF OF RESIDENCE (OPTIONAL FOR FREELANCERS) 	
+For proof of residence the customer should upload ONE of the following documents: 
+
+Utility Bill (Internet, Telephone, electricity) under the name of the firm'sManaging Director (Owner) OR, 
+Self declaration OR , 
+German ID or Extract from residence registry (for registered persons).
+
+PROOF OF BUSINESS ESTABLISHMENT	The document 'Gewerbe-Anmeldung' is required.
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following:
+
+Financial statement (Profit and Loss Statement), OR
+Management Accounts 
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+
+VIDEO ID 	
+For Video ID the customer must conduct a video ID session with an agent and show a valid official identification document issued by a public authority with the picture of the individual and an expiration date.
+
+EU passport, OR 
+EU Identity Card, OR 
+Residence Permit*
+*Residence Permit: If it's not a EU-person we request the EU passport 
+The customer in this proof must upload a photo of the Identification document and a selfie photo.
+PROOF OF TAX - ID	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+A letter by the competent tax authority to your firm, where the Tax Number (Steuernummer) is stated (not older than 12 months), OR
+Articles of Association that state the date of firm's establishment (only for new businesses).
+PROOF OF BUSINESS ESTABLISHMENT	
+For proof Business establishment the customer should upload an extract from the commercial register.
+
+Additionally the merchant might be asked to upload a BO declaration form stating all the shareholders and the ones that have ≥25% of shares, duly signed by the Legal Representative & the Shareholders.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+UBO DATA (Associated person verification proof)	
+Please upload the following data for the beneficial owner / shareholder/ founder:
+
+-Valid Proof of ID (National ID, Passport).
+-Proof of address (Utility bill not older than 6 months).
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following:
+
+Financial statement (Profit and Loss Statement), OR
+Management Accounts 
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 11: KYC Policy Hungary
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship /Freelancers / Individual Business  
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/kyc-policy-hungary#:~:text=Sole%20proprietorship%20/Freelancers,Electronic%20ID%20Process
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following documents:
+
+The Hungarian address card (front side) for Hungarian nationals, OR
+A utility bill, not older than 3 months for foreigners, in case an adress card is not available
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please upload a Certification of registration (from the past 30 days), OR articles of association / deed of foundation if the entity has not been registered yet. 
+
+PROOF OF TAX ID 	Please, upload the TIN Card for the natural person.
+PROOF OF REPRESENTATION (OPTIONAL) 	Please upload the power of attorney in which the authority of operating the account is appointed.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Most recent (audited, if applicable) financial statements, OR
+A final court or administrative decision (e.g. a probate order) that is no more than 5 years old, OR 
+A certificate from a public authority (e.g. a land or property administration authority) no more than 5 years old, OR 
+Other public documents or private deed with full probative value (e.g. relating to the sale of real estate, a motor vehicle, a gift), which are no more than 5 years old, OR 
+A certificate of winnings from a company that organizes games of chance, no more than 1 year old
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Korlátolt felelősségű társaság, Közkereseti társaság, Betéti társaság, Zártkörűen működő részvénytársaság
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following documents:
+
+The Hungarian address card (front side) for Hungarian nationals, OR
+A utility bill, not older than 3 months for foreigners, in case an adress card is not available.
+PROOF OF BUSINESS ESTABLISHMENT	
+Please, upload a Certification of registration (from the past 30 days), OR articles of association / deed of foundation if the entity has not been registered yet. 
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+PROOF OF TAX ID 	
+Please, upload the TIN Card for the natural person.
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA	
+Please, upload the following:
+
+Proof of Identification (i.e., ID card, passport etc.)
+Proof of residence (i.e, utility bill not older than 3 months etc.)
+PROOF OF UBO / OWNHERSHIP	Please upload an extract from the competent UBO Registry or a BO Declaration, duly signed by the legal representative.
+PROOF OF REPRESENTATION (OPTIONAL)	Please, upload the power of attorney in which the authority of operating the account is appointed.
+STRUCTURE SHAREHOLDING (OPTIONAL)	Please, upload the shareholding structure of the entity, mentioning percentages of ownership and countries of establishment, up to the last natural person. The document should be duly signed by the legal representative.
+POWER OF REPRESENTATIVES (OPTIONAL) 	Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Most recent (audited, if applicable) financial statements, OR
+A final court or administrative decision (e.g. a probate order) that is no more than 5 years old, OR
+A certificate from a public authority (e.g. a land or property administration authority) no more than 5 years old, OR
+Other public documents or private deed with full probative value (e.g. relating to the sale of real estate, a motor vehicle, a gift), which are no more than 5 years old, OR
+A certificate of winnings from a company that organizes games of chance, no more than 1 year old
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 12: KYC Policy Ireland
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+ 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship /Freelancers / Self-employed
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Utility Bill (not older than 3 months), OR
+Current car or home insurance policy, OR
+Government issued document showing address (nt older than 3 months), OR
+Bank statement (not older than 3 months
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+The customer must upload an employement confirmation (e.g., official document from the Irish Revenue or any other local authority etc.), showing the PPS number.
+
+ECONOMIC PROFILE (OPTIONAL)	The customer must upload:
+Audited financial statements, OR
+Balance sheet and Profit & Loss account, OR
+Management Accounts (not older than 6 months)
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Utility Bill (not older than 3 months), OR
+Current car or home insurance policy, OR
+Government issued document showing address (nt older than 3 months), OR
+Bank statement (not older than 3 months
+PROOF OF BUSINESS ESTABLISHMENT	
+Please, upload the following documents:
+
+Certificate of Incorporation AND Constitution / Memorandum and Articles of Association, OR
+Companies Registration Office (CRO), report (which will include current status, registered office address and list of directors and secretary) 
+For General Partnerships we ask: Partnership Agreement (signed/certified) 
+For Limited Partnerships identification we ask: 
+Certificate of Incorporation OR Constitution / Memorandum and Articles of Association, AND
+Companies Registration Office (CRO), report (which will include current status, registered office address and list of directors and secretary) 
+PROOF OF UBO/ONWHERSHIP	
+Please upload an extract from the Central Register of Beneficial Ownership of Companies. 
+
+If needed, merchant will be asked to upload a BO declaration. What is the Beneficial Ownership Declaration and why should I submit it? | Viva Wallet Support
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA (OPTIONAL)  	
+Please upload the following documents:
+
+Proof of Identification (valid passport etc.)
+Proof of Residence (utility bill) 
+POWER OF REPRESENTATION (OPTIONAL) 	
+Please upload ONE of the following documents:
+
+BoD members, authorizing the person that operates the accounts, OR
+Letter of the entity confirming authorization for an individual to act on its behalf 
+
+
+PROOF OF TAX ID 	Merchant must upload a document from tax authorities that mention the TRN number 
+ECONOMIC PROFILE (OPTIONAL)	Merchant must upload ONE of the following documents:
+Audited financial statements, OR 
+Balance sheet and Profit & Loss account, OR
+Management Accounts (not older than 6 months)
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 13: KYC Policy Italy
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit 
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Recent utility bill, gas, electricity, water, landline phone (not older than 6 months), OR
+Official governmental document that states the address (not older than 6 months), OR
+Insurance document that states the address (not older than 6 months).
+
+PROOF OF TAX - ID 	
+For proof of TAX ID we ask for a certificate of attribution of tax id code, not older than 6 months.
+
+PROOF OF OCCUPATION	
+For proof of occupation, we ask to upload ONE of the following documents:
+
+For employees:
+
+Recent Pay slip/ Payroll, OR
+Recent Employment Contract
+For Self-employed:
+
+Recent extract from the trade registry (Visura) not older than 3 months.
+
+POWER OF REPRESENTATIVES (OPTIONAL) 	
+Please, upload ONE of the following documents:
+
+- a recent extract from the trade registry (visura), not older than 3 months, OR
+
+- Deed of incorporation and by-laws, OR 
+
+- Special Power of attorney.
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Financial statements (audited, if applicable), OR
+VAT declaration, OR 
+Tax Return, OR 
+Annual turnover declarations, OR 
+Other financial documents (e.g., shareholders’ loans), OR 
+Inheritance/donation documents, OR 
+Income from sales of business/assets.
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+ Società per azioni (Spa), Società in accomandita per azioni (Sapa), Società a responsabilità limitata (Srl), Società in nome collettivo (Snc), Società in accomandita semplice (Sas), Società semplice (Sas)
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit 
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Recent utility bill, gas, electricity, water, landline phone (not older than 6 months), OR
+Official governmental document that states the address (not older than 6 months), OR
+Insurance document that states the address (not older than 6 months).
+PROOF OF TAX - ID 	
+Please, upload a certificate of attribution of VAT number and Tax ID code, not older than 6 months.
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For proof of Business establishment, shareholding & representation we ask for a recent extract from the trade registry (Visura) not older than 3 months.
+
+
+
+PROOF OF OWNERSHIP 	
+Please, upload ONE of the following documents:
+
+A recent extract from the trade registry (Visura), not older than 3 months, OR
+A BO declaration, duly signed by the legal representative.
+PROOF OF OCCUPATION	
+For proof of occupation, we ask to upload ONE of the following documents:
+
+For employees:
+
+Recent Pay slip/ Payroll, OR
+Recent Employment Contract
+For Self-employed:
+
+Recent extract from the trade registry (Visura) not older than 3 months.
+
+POWER OF REPRESENTATIVES (OPTIONAL) 	
+Please, upload ONE of the following documents:
+
+- a recent extract from the trade registry (visura), not older than 3 months, OR
+
+- Deed of incorporation and by-laws, OR 
+
+- Special Power of attorney.
+
+PROOF OF REPRESENTATION	
+Please, upload a recent extract from the trade registry (Visura), not older than 3 months.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Financial statements (audited, if applicable), OR
+VAT declaration, OR 
+Tax Return, OR 
+Annual turnover declarations, OR 
+Other financial documents (e.g., shareholders’ loans), OR 
+Inheritance/donation documents, OR 
+Income from sales of business/assets.
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 14: KYC Policy Luxembourg
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers/Individual Business
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE 	
+Please upload one recent utility bill (not older than 3 months)
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please, upload ONE of the following documents:
+
+An extract from the business registry, OR
+A valid business permit issued by an official authority
+PROOF OF TAX ID 	Please, upload a copy of the last tax returns or the Social Security Card, where the Tax Identification number is shown.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+The most recent audited financial statements, OR
+The most recent management accounts
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2:
+
+Legal Entities
+ Société à responsabilité limité (SARL), Société par actions simplifiée (SAS), Société en nom collectif (SENC), Société en commandite simple (SCS), Société en commandite par actions (SCA), Société cooperative (SC)
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE 	
+Please upload one recent utility bill (not older than 3 months)
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENATION 	
+Please, upload the following documents:
+
+The last coordinated or up-to-date articles of incorporation (or an equivalent incorporation document); AND
+A recent and up-to-date extract from the companies register (registre des sociétés) (or equivalent supporting evidence
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded
+
+PROOF OF TAX ID 	
+Please, upload the following documents:
+
+For the natural persons, please upload a copy of the last tax returns OR the Social Security Card, where the Tax Identification number is shown.
+
+For the legal entity, please upload any official document from the Tax Authorities, where the Tax Identification number is shown.
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA	
+Please, upload the following documentation:
+
+Proof of ID (e.g., ID Card, Passport etc.)
+Proof of Residence (e.g., utility bill not older than 3 months etc.)
+Proof of Tax ID (if not shown on the above)
+PROOF OF UBO/OWNHERSHIP  	Please, upload an extract from the Register of Beneficial Owners
+SHAREHOLDING STRUCTURE (OPTIONAL) 	Please, upload a shareholding structure of the entity, that shows the percentages of ownership up to the last natural person, duly signed by the legal representative.
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following documents:
+
+The most recent audited financial statements, OR
+The most recent management accounts
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 15: KYC Policy Malta
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+ A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Correspondence from a central or local government authority, department or agency, OR
+A recent utility bill, OR
+A lease contract or agreement.
+Also accepted documents are:
+
+Valid unexpired national or other government-issued identity card, OR 
+Valid unexpired residence card, OR 
+Valid unexpired Driving license
+Note! 
+
+*Utility Bill dated not older than 6 months from issue date;
+
+*If ID Card, Residence Card or Driving License already used for ID Check it cannot be used for Proof of Residence but instead a secondary document from the list needs to be provided and verified.
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please, upload the registration certificate (VAT certificate) to the competent authority (e.g., Ministry of Finance etc.)
+
+For Doctors and Medical practicioners, please upload the certificate of registration from the competent Medical Council Register."
+
+The VAT certificate must showing individual's name or Trading name and not be older than 6 months.
+
+Also its accepted:
+
+- For Lawyers and Notaries: please upload the Warrant.
+
+- For Insurance Agencies: please upload the certificate from the relevant Authority.
+
+POWER OF REPRESENTATIVES (OPTIONAL) 	
+If Administrator is not listed as any of the below:
+
+The Sole Trader or Freelancer themselves; OR 
+Any one of the Directors in case of Companies; OR 
+Any one of the Partners in case of Partnerships
+Power of Attorney clearly showing the Administrator's name and ID/Passport number, recently dated, signed only by a notary and clearly stating the powers given to the individual acting as the Administrator. 
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Financial statements, (Audited, if applicable), OR
+Annual returns, OR
+Tax returns for the previous or current year, OR
+Bank statements that are not older than 6 months. 
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration 
+
+List Item 2: Legal Entities
+Private company limited by shares “Ltd”, Public limited company “PLC”, Limited liability partnership “LLP”
+
+ELECTRONIC ID	
+
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Correspondence from a central or local government authority, department or agency, OR
+A recent utility bill, OR
+A lease contract or agreement.
+Also accepted documents are:
+
+Valid unexpired national or other government-issued identity card, OR 
+Valid unexpired residence card, OR 
+Valid unexpired Driving license
+Note! 
+
+*Utility Bill dated not older than 6 months from issue date;
+
+*If ID Card, Residence Card or Driving License already used for ID Check it cannot be used for Proof of Residence but instead a secondary document from the list needs to be provided and verified.
+
+PROOF OF BUSINESS ESTABLISHMENT	
+Please, upload the following documentation:
+
+1)    Certificate of incorporation, OR Certificate of good standing (not older than 3 months)
+
+AND
+
+2)    Most recent version of the Memorandum and Articles of Association
+
+For Limited liability partnership “LLP”:
+
+Please, upload the PartnerShip Agreement outlining the Partners and the amount/percentage of shares owned by each.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+SHAREHOLDING STRUCTURE (OPTIONAL) 	
+Please, upload the shareholding structure of the entity up to the last natural person, duly signed by the legal representative.
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA	
+Please, upload the following documents:
+
+Proof of Identification (valid ID card or valid passport)
+Proof of Residence
+POWER OF REPRESENTATIVES (OPTIONAL) 	
+If Administrator is not listed as any of the below:
+
+The Sole Trader or Freelancer themselves; OR 
+Any one of the Directors in case of Companies; OR 
+Any one of the Partners in case of Partnerships
+Power of Attorney clearly showing the Administrator's name and ID/Passport number, recently dated, signed only by a notary and clearly stating the powers given to the individual acting as the Administrator. 
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please, upload ONE of the following documents:
+
+Financial statements, (Audited, if applicable), OR
+Annual returns, OR 
+Tax returns for the previous or current year, OR 
+Bank statements that are not older than 6 months. 
+
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 16: KYC Policy Netherlands
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+
+PLEASE CONSULT THE TABLES BELOW 
+
+Individual Business / Freelancers
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Telephone bill at the private address; fixed or mobile. max. 3 months old, OR 
+Energy bill of the private address; water, gas or electricity. max. 3 months old, OR 
+A recent extract from the Personal Records Database (BRP, formerly GBA), OR 
+A copy of the rental contract where you reside, OR 
+Title deed of your owner-occupied home.
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING AND REPRESENTATION	
+For this proof, the customer must upload ONE of the following documents:
+
+An (online) extract from the Trade Register of the Chamber of Commerce or a deed, OR 
+A statement drawn up or issued by a lawyer, civil-law notary or junior civil-law notary established in the Netherlands or in another EU/EEA member state or a comparable independent practitioner of a legal profession, OR
+Extract from the UBO register.
+PROOF OF TAX-ID	
+For this proof the customer need to upload a copy of the letter from the tax office (Belastingdienst), stating the company's TIN number (Omzetbelastingnummer).
+
+ECONOMIC PROFILE (OPTIONAL)	
+For the proof Economic Profile, please upload Balance sheet and Profit & Loss account.
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+ Naamloze Vennootschap, Vereniging, BV – Besloten Vennootschap, Stichting, Coöperatie/Onderlinge Waarborgmaatschappij.
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask for the customer to upload ONE of the following: 
+
+Telephone bill at the private address; fixed or mobile. max. 3 months old, OR 
+Energy bill of the private address; water, gas or electricity. max. 3 months old, OR 
+A recent extract from the Personal Records Database (BRP, formerly GBA), OR 
+A copy of the rental contract where you reside, OR 
+Title deed of your owner-occupied home.
+PROOF OF TAX - ID 	
+For this proof the customer need to upload a copy of the letter from the tax office (Belastingdienst), stating the company's TIN number (Omzetbelastingnummer).
+
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For this proof we ask the customer to upload the ONE of the following documents:
+
+An (online) extract from the Trade Register of the Chamber of Commerce or a deed, OR
+A statement drawn up or issued by a lawyer, civil-law notary or junior civil-law notary established in the Netherlands or in another EU/EEA member state or a comparable independent practitioner of a legal profession;
+AND
+
+• BO declaration https://help.vivawallet.com/nl/articles/5148689-wat-is-een-verklaring-van-uiteindelijk-gerechtigden-en-waarom-ben-ik-verplicht-deze-in-te-dienen, duly signed by the legal representative.
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded. 
+
+PROOF OF AUTHORIZATION (OPTIONAL) 	
+For proof of Authorization, we ask for the customer to upload a declaration or power of attorney, giving the authority to the legal representative.
+
+ECONOMIC PROFILE (OPTIONAL)	
+For the proof Economic Profile, please upload Balance sheet and Profit & Loss account.
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 17: KYC Policy Poland
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.  
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Individual Business / Freelancers
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask from the customer to upload one utility bill, stating the current personal address, not older than 6 months.
+
+The following bills are accepted: electricity, gas, telephone, TV, landline internet in pdf format or photos (scans will not be accepted). 
+
+PROOF OF BUSINESS ESTABLISHMENT	
+The customer for proof of business establishment must upload:
+
+For Sole Proprietors and Entrepreneurs, please upload an extract from the Central Electronic Register and Information on Economic Activity (CEIDG).
+
+For Entrepreneurs not registered in CEIDG or KRS (i.e. Individual Agricultural Farm Holders), please upload an extract from the National Official Registry of National Economy Entities (REGON Base).
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload a Recent audited financial statement, if available, or management accounts.  
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Spółka akcyjna, S.A., Spółka z ograniczoną odpowiedzialnością, sp. z o.o., Spółka jawna, sp.j., Spółka komandytowa, S.K., Oddział), Stowarzyszenie, Fundacj, Spółka partnerska, sp.p, Spółka komandytowo-akcyjna, S.K.A., Spółdzielnia
+
+
+ELECTRONIC ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE	
+For proof of residence, we ask from the customer to upload one utility bill, stating the current personal address, not older than 6 months.
+
+The following bills are accepted: electricity, gas, telephone, TV, landline internet in pdf format or photos (scans will not be accepted). 
+
+PROOF OF BUSINESS ESTABLISHMENT	
+For this proof, the customer must upload ONE of the KRS Extract (up-to-date company search full report).
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded. 
+
+PROOF OF OWNERSHIP	The customer must upload an extract from the UBO Registry.
+POWER OF REPRESENTATIVES	The customer must upload a power of attorney that authorizes the person to operate the account, duly signed.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload a Recent audited financial statement, if available, or management accounts.  
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 18: KYC Policy Portugal
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+Sole Proprietorship (Sociedade Unipessoal), Individual Limited Liability Establishment (Estabelecimento Individual de Responsabilidade Limitada), Sole proprietor (ENI, Empresário em Nome Individual).
+
+
+VIDEO ID	
+For VIDEO ID the customer must upload ONE of the following documents:
+
+valid official identification document issued by a public authority with the picture of the individual and expired date:
+Passport, OR
+National ID, OR 
+Resident card ("Título de Residência"), OR 
+Identity Card of the Military or Paramilitary Forces.
+PROOF OF ADDRESS	
+-Utility bill for fixer services (not mobile phones for example which is not a fixed service) issued for your home address not older than 6 months, OR
+
+- Proof of residence issued by a governmental authority such as the ones you can download from the tax authority's website, eportugal.gov, or social security. Or any other proof issued by your council of parish stating that you live at that address, OR
+
+- Documents issued by banks or insurance companies (not older than 6 months). 
+
+PROOF OF BUSINESS ESTABLISHMENT	
+The customer must upload a registry of Starting a business activity.
+
+A document issued by the tax authorities which proves that it you have an active commercial activity and upload an invoice not older than 3 months along with the Self Employment Registration issued by the Tax Authorities (Comprovativo de Entrega da Declaração de Registo / Inicio de Actividade).
+
+Please note: The document CERTIFICAÇÃO can be also accepted.
+
+POWER OF REPRESENTATIVES (OPTIONAL)	
+The customer should upload  the following data as per below cases:
+
+- the Legal Representative is a lawyer/attorney. Please provide Power of attorney – to confirm that the person (i) is an attorney, and (ii) has powers to represent the client before Viva Wallet.
+
+- Delegated Director (i.e., director of the client who has been granted powers to represent the relevant client in specific acts). Please provide simple copy of the corporate resolution in order to confirm that the director has powers to represent the client before Viva Wallet.
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+The latest VAT Declaration (DECLARAÇÃO PERIÓDICA - COMPROVATIVO DE ENTREGA DA DECLARAÇÃO - VIA INTERNET), OR The latest IRS declaration
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Private Limited Liability Company (Lda.), SA.
+
+
+VIDEO ID	
+For VIDEO ID the customer must upload ONE of the following documents:
+
+valid official identification document issued by a public authority with the picture of the individual and expired date:
+Passport, OR
+National ID, OR 
+Resident card ("Título de Residência"), OR
+Identity Card of the Military or Paramilitary Forces
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+When the customer registers in Viva Wallet, he/she will be requested to provide us the Access code for the Certidao Permanente. In case the merchant has not provided a valid access code during registration, he/she must upload the Permanent Certificate of the Company.
+
+If the customer provides us with the access code, then automatically the Certidao Permanente will be uploaded in the Proof of business establishment, shareholding & representation.
+
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+COMPANY STRUCTURE	Please, submit the proof of submission of the declaration of the Ultimate Beneficiary Owner Registry (RCBE)
+UBO DATA (Associated person verification proof)
+1. Photograph of the ID document in JPEG format;
+
+2. Proof of tax ID, if not visible on the ID document;
+
+3. Proof of address (invoice for fixed services (e.g., water, electricity, gas) or proof issued by a public body (Tax Authority, Parish Council, etc.) or banks and/or insurance companies); and,
+
+4. Proof of occupation (e.g., salary slip, declaration from the employer, identification card issued by professional association). If you do not have an occupation, are retired or unemployed, please download e fill our minute).
+
+POWER OF REPRESENTATIVES (OPTIONAL)	
+The customer should upload  the following data as per below cases:
+
+- the Legal Representative is a lawyer/attorney. Please provide Power of attorney – to confirm that the person (i) is an attorney, and (ii) has powers to represent the client before Viva Wallet.
+
+- Delegated Director (i.e., director of the client who has been granted powers to represent the relevant client in specific acts). Please provide simple copy of the corporate resolution in order to confirm that the director has powers to represent the client before Viva Wallet.
+
+ECONOMIC PROFILE (OPTIONAL)	
+For the proof Economic Profile, the customer must upload the latest annual report dully signed by an independent auditor or the IES declaration. If the customer does not have yet a the annual report or submitted your annual IES report, please upload your latest VAT periodic declaration.
+
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 19: KYC Policy Romania
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1:Individual Business/Freelancers
+Electronic ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 6 months), OR 
+Tax Declaration, demand letter or exemption certificate (dated in the last 6 months), OR 
+Home Insurance (issued by a reputable Insurance Company based in EEA for the running year), OR 
+Bank account statement (dated in the last 6 months), OR 
+Valid ID card.
+PROOF OF BUSINESS ESTABLISHMENT	
+For this proof, the customer must upload ONE of the following documents:
+
+Constatator certificate issued in the last 12 months, OR 
+Updated articles of association /decision of the competent statutory body or authentic special authority
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Income declaration for natural persons (Declaration 212 or 100), OR 2. Self-income declaration for natural persons.
+
+For newly incorporated companies that cannot provide any of the above documents, the customer is required to upload the first periodic tax return to the authorities OR the initial Tax Registration Statement (that contains the proof it has been presented to ANAF, like a registration number, or digitally signed.
+
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Legal Entities
+Societate cu răspundere limitată (SRL), Societate pe actiuni (SCA), Societate in nume colectiv (SNC), Societate in comandita simpla (SCS), Sucursala, Joint-stock Company (SA)
+
+
+Electronic ID	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+Utility Bill (either gas, electricity, water, landline phone) (dated in the last 6 months), OR 
+Tax Declaration, demand letter or exemption certificate (dated in the last 6 months), OR 
+Home Insurance (issued by a reputable Insurance Company based in EEA for the running year), OR 
+Bank account statement (dated in the last 6 months), OR 
+Valid ID card.
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION 	
+For this proof, the customer must upload ONE of the following documents:
+
+Constatator certificate issued in the last 12 months, OR 
+Updated articles of association /decision of the competent statutory body or authentic special authority
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+UBO DATA (Associated person verification proof) / Mandatory if applicable	
+Please upload the following data for the beneficial owner / shareholder/ founder:
+
+-Valid Proof of ID (National ID, Passport).
+-Proof of address (Utility bill not older than 6 months).
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest Financial Statements, not older than 2 years.
+Management Accounts issued in the last 6 months, OR  signed by the accountant of the company. This applies for start-up companies which don't have Financial Statements, OR 
+For newly founded companies that cannot provide any of the above documents, please upload the first periodic tax return to the authorities.
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 20: KYC Policy Spain
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+PLEASE CONSULT THE LIST BELOW 
+
+List Item 1: Sole proprietorship/Freelancers
+VIDEO ID	
+For VIDEO ID the customer must upload ONE of the following documents:
+
+National Identity Document*, OR
+Passport.
+(*) In the event that the ID card is out of date, the proof of application for its renewal along with the valid passport must be provided.
+
+For natural persons of foreign nationality :
+
+The Residence Card , AND
+The Foreigner Identity Card, OR
+The Passport.
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+Utility bill (either gas, electricity, water, landline/mobile phone) (dated in the last 6 months), OR
+Official document where a governmental entity recognizes the address such us Certificate of census registration (dated in the last 6 months), OR 
+Bank or insurance document stating the address (dated in the last 6 months), OR 
+Driving license showing the address, OR 
+Rental Contract, OR 
+Property Purchase Contract, OR 
+Certificate of Registration of Union Citizens (for EU residents).
+PROOF OF OCCUPATION 	For proof of occupation, the customer must upload ONE of the following:
+For Resident salary earners
+
+Pay slip/ Payroll, OR 
+Current Employment Contract.
+For Non-resident salary earners
+
+Pay slip/ Payroll, OR 
+Current Employment Contract or equivalent document certified by notary, OR 
+Tax declaration of the country od residence (last available).
+For Self-employed
+
+Personal income tax return (Certificado de situacion Censal)
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Audited financial statements issued in the last 2 years; OR 
+Management accounts signed by an independent accountant issued in the last 6 months.
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+VIDEO ID	
+For VIDEO ID the customer must upload one of the following documents:
+
+National Identity Document*, OR
+Passport.
+(*) In the event that the ID card is out of date, the proof of application for its renewal along with the valid passport must be provided.
+
+For natural persons of foreign nationality :
+
+The Residence Card , AND
+The Foreigner Identity Card, OR
+The Passport.
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+Utility bill (either gas, electricity, water, landline/mobile phone) (dated in the last 6 months), OR
+Official document where a governmental entity recognizes the address such us Certificate of census registration (dated in the last 6 months), OR 
+Bank or insurance document stating the address (dated in the last 6 months), OR 
+Driving license showing the address, OR 
+Rental Contract, OR 
+Property Purchase Contract, OR 
+Certificate of Registration of Union Citizens (for EU residents).
+PROOF OF BUSINESS ESTABLISHMENT	
+For the proof of Business Establishment, the customer must upload ONE the following documents:
+
+Certificado del Registro Mercantil not older than 6 months, OR 
+Certificado de Situacion Censal not older than 6 months.
+Note: In case the company has more involved persons (f.i. shareholders), then a new proof will be added that is called "Associated person verification", where there will be stated by the KYC department, the document/s that must be uploaded.
+
+COMPANY STRUCTURE	Please, provide the full structure scheme, authenticated by the legal representative.
+PROOF OF UBO	For proof of UBO/Ownership, we ask for the customer to upload a BO declaration, which can be found here: What is the Beneficial Ownership Declaration and why should I submit it? (¿Qué es la Declaración de titularidad real y por qué debo presentarla?): https://help.vivawallet.com/es/articles/5148689-que-es-la-declaracion-de-titularidad-real-y-por-que-debo-presentarla
+
+PROOF OF OCCUPATION 	For proof of occupation, the customer must upload ONE of the following:
+For Resident salary earners
+
+Pay slip/ Payroll, OR 
+Current Employment Contract.
+For Non-resident salary earners
+
+Pay slip/ Payroll, OR 
+Current Employment Contract or equivalent document certified by notary, OR 
+Tax declaration of the country od residence (last available).
+For Self-employed
+
+Personal income tax return (Certificado de situacion Censal)
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Audited financial statements issued in the last 2 years; OR 
+Management accounts signed by an independent accountant issued in the last 6 months.
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 21: KYC Policy United Kingdom
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+You may check different sample documents that are being asked by our merchants here: https://viva-wallet.document360.io/v1/docs/kyc-policy-united-kingdom-sample-documents
+
+KYC Policy United Kingdom - Sample Documents
+
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important! 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+For detailed guidance on what documents should merchants in the UK upload in their account, please check our relevant article here¨https://viva-wallet.document360.io/v1/docs/kyc-policy-united-kingdom
+
+Useful Info
+
+
+Legal Entities may find the below documents in Companies House by visiting this link Find and update company information - GOV.UK (company-information.service.gov.uk): https://find-and-update.company-information.service.gov.uk/
+Proof of Business Establishment, Shareholding & Representation 
+Economic Profile (Optional)
+Types of Documents can be found here: https://viva-wallet.document360.io/docs/kyc-policy-united-kingdom-sample-documents
+
+PLEASE CONSULT THE LIST BELOW
+
+List Item 1: Sole proprietorship/Freelancers
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+Passport, OR 
+Driver's license 
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+- Valid photocard driving license (full only), OR
+- A Bank/Credit Union statement from another regulated financial institution (dated in the last 3 months), OR
+- UK Credit Card Statement (dated in the last 3 months), OR 
+- UK Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months), OR
+- UK Council Tax, demand letter or exemption certificate (dated in the last 6 months), OR
+- A current UK tenancy agreement issued by a solicitor, housing association, local council or reputable letting agency, OR
+- An HMRC tax notification letter (dated in the last 6 months).
+PROOF OF BUSINESS ESTABLISHMENT 	For Proof of Business Establishment, we ask for the customer to upload HMRC Correspondence showing the UTR Number (Can be within the last 12 months or from the previous tax year).
+PROOF OF BUSINESS ADDRESS (OPTIONAL)	If this proof is required, then the customer must upload one utility bill (Dated in the last 6 months).
+POWER OF REPRESENTATIVES (OPTIONAL)	Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest Financial Statements (FROM HMRC), not older than 2 years, OR 
+Management Accounts issued in the last 6 months signed by the accountant of the company. This applies for start-up companies which don't have Financial Statements, OR 
+Income declaration for natural persons, OR 
+Self income declaration for natural persons
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Private company limited by shares “Ltd”, Private company limited by guarantee, Public limited company “PLC”, Limited liability partnership “LLP”
+
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+Passport, OR 
+Driver's license 
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account.
+
+
+
+PROOF OF RESIDENCE 	
+For proof of residence, the customer must upload ONE of the following:
+
+- Valid photocard driving license (full only), OR
+- A Bank/Credit Union statement from another regulated financial institution (dated in the last 3 months), OR
+- UK Credit Card Statement (dated in the last 3 months), OR 
+- UK Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months), OR
+- UK Council Tax, demand letter or exemption certificate (dated in the last 6 months), OR
+- A current UK tenancy agreement issued by a solicitor, housing association, local council or reputable letting agency, OR
+- An HMRC tax notification letter (dated in the last 6 months).
+PROOF OF BUSINESS ESTABLISHMENT, SHAREHOLDING & REPRESENTATION	
+For legal forms Private company limited by shares “Ltd”, Private company limited by guarantee, Public limited company “PLC”, Limited liability partnership “LLP”, the customer should upload ONE of the following documents:
+
+Extract from the Companies House, OR
+Incorporation Document, OR 
+Governing Document (Constitution/Articles of Association).
+Note: In case the company has more involved persons (e.g. shareholders with shares ≥25%), then a new proof will be added that is called "Associated person verification", where the KYC department will ask from the customer the documents below: 
+
+Please, upload the following documents: 
+
+1) Proof of ID, ONE of the following: 
+
+Valid passport, OR 
+Valid photocard driving license (full only), OR 
+EEA National Identity card, OR 
+Firearms certificate or shotgun license, OR 
+Identity card issued by the Electoral Office for Northern Ireland 
+AND 
+
+2) Proof of Residence, ONE of the following: 
+
+Valid photocard driving license (full only), OR
+A Bank/Credit Union statement from another regulated financial institution (dated in the last 3 months), OR
+UK Credit Card Statement (dated in the last 3 months), OR 
+UK Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months), OR 
+UK Council Tax, demand letter or exemption certificate (dated in the last 6 months), OR 
+A current UK tenancy agreement issued by a solicitor, housing association, local council or reputable letting agency. 
+PROOF OF BUSINESS ADDRESS (OPTIONAL)	If this proof is required, then the customer must upload one utility bill (Dated in the last 6 months).
+COMPANY'S STRUCTURE (OPTIONAL)	If this proof is required, then the customer must upload the shareholding structure of the company, including any shareholder who holds more than a 25% percentage of ownership up to the last natural person, duly signed by the legal representative.
+POWER OF REPRESENTATIVES (OPTIONAL)	Please upload an official document, providing to you the legal authorization to open and use the Viva Wallet payment account on behalf of the registered company.
+UBO DATA (Associated person verification proof) / Mandatory if applicable
+Please, upload the following documents:
+
+1) Proof of ID:
+
+▪ Valid passport, OR
+
+▪Valid photocard driving license (full only), OR
+
+▪EEA National Identity card, OR
+
+▪Firearms certificate or shotgun license, OR
+
+▪Identity card issued by the Electoral Office for Northern Ireland
+
+AND
+
+2) Proof of Residence
+
+- Valid photocard driving license (full only)
+
+- A Bank/Credit Union statement from another regulated financial institution (dated in the last 3 months)
+
+- UK Credit Card Statement (dated in the last 3 months)
+
+- UK Utility Bill (either gas, electricity, water, landline phone) (dated in the last 3 months)
+
+- UK Council Tax, demand letter or exemption certificate (dated in the last 6 months)
+
+- A current UK tenancy agreement issued by a solicitor, housing association, local council or reputable letting agency.
+
+- An HMRC tax notification letter (dated in the last 6 months)
+
+
+ECONOMIC PROFILE (OPTIONAL)	
+Please upload ONE of the following documents:
+
+Latest Financial Statements, not older than 2 years, OR 
+Management Accounts issued in the last 6 months signed by the accountant of the company. This applies for start-up companies which don't have Financial Statements, OR 
+Income declaration for natural persons, OR 
+Self income declaration for natural persons
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+Subsection 22: KYC Policy Sweden
+Merchants that register Viva Wallet are automatically assigned to KYC level 4. 
+
+Upon registration, the customer must upload the relevant documents to use their account, otherwise the account will not be functional!
+
+Important!
+ 
+The following information must be given to customers that have already created an account and need guidance or details about the documents that they must upload. For customers that have not created an account and want to know the documents that will be asked after the registration, we should guide them to open an account according to the legal form of their company and see the required documents in the section "Profile" of their account.
+
+
+We do not have to request removal or lab reports for the following products:
+
+Edible hemp products (biscuits, chocolate etc), Hemp (salad) Oil, or flour
+Non-cbd/non-cultivation , Edible Hulled/Peeled Hemp Seeds for salads/yogurts etc
+
+PLEASE CONSULT THE LIST BELOW
+List Item 1: Sole proprietorship/Freelancers / Enskild näringsidkare
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process: https://viva-wallet.document360.io/docs/electronic-id-process-remote-id-verification-with-qualified-electronic-signature
+
+Important note! The person that must upload the ID document is the person that opens the account. 
+
+
+
+PROOF OF RESIDENCE 	
+Please, upload ONE of the following:
+
+Government-issued ID showing local address, OR
+Utility bill, OR
+Tax notice, OR
+Rent receipt, OR
+Title deed
+
+PROOF OF BUSINESS ESTABLISHMENT 	
+Please, upload the following documents:
+
+Certificate of registration from the Swedish Companies Registration Office
+Cerififcate of Good Standing
+CBD (OPTIONAL)	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
+
+List Item 2: Legal Entities
+Kommanditbolag, Filial, Publikt aktiebolag, Privat aktiebolag, Handelsbolag, Ekonomisk förening
+
+ELECTRONIC ID 	
+For Electronic ID the customer must: 
+
+A. Accept Terms and Conditions & Provide E-Signature
+B. Check Requirements screen & Document Upload
+C. Unassisted Video process  
+Accepted Documents are: 
+National ID, OR 
+Passport, OR 
+Residence Permit
+
+
+More info can be found here Electronic ID Process.
+Important note! The person that must upload the ID document is the person that opens the account.
+
+PROOF OF RESIDENCE 	
+Please upload ONE of the following:
+
+Government-issued ID showing local address, OR
+Utility bill, OR
+Tax notice, OR
+Rent receipt, OR
+Title deed
+PROOF OF BUSINESS ESTABLISHMENT	
+Please, upload the following documents:
+
+Certificate of registration from the Swedish Companies Registration Office
+PROOF OF UBO/ONWHERSHIP	
+Please upload an extract from the UBO Registry
+
+ASSOCIATED PERSON VERIFICATION / UBO DATA	
+Please upload the following documents:
+
+Proof of Identification
+Proof of Residence
+POWER OF REPRESENTATIVES 	
+Please upload one of the following documents:
+
+Certificate of registration
+Equivalent authorising document, e.g. power of attorney or equivalent foreign documents
+
+
+CBD (OPTIONAL) 	
+If the merchant sells CBD Products, we ask him to upload the 3 documents below: 
+
+CBD Lab Reports: Please upload detailed laboratory certificate(s), regarding your 3 best-selling CBD product(s) on sale.
+CBD Invoice: Please upload a recent invoice from your CBD Supplier.
+CBD Declaration: Please, upload the following declaration, filled out and signed by the legal representative. CBD Declaration | Viva Wallet Support: https://help.vivawallet.com/en/articles/5833250-cbd-declaration
